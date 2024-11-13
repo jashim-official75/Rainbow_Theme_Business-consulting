@@ -2,6 +2,11 @@
 
 @import '../utilities/animation';
 @import '../utilities/transform';
+
+
+
+
+
 // =====================
 // pargraph style
 // =====================
@@ -53,14 +58,17 @@ a {
 // =====================
 // h2 style
 // =====================
+
 h2 {
     font-size: clamp(1.2rem, 2vw, 2rem); 
     font-weight: 600;
-    color: $dark-color;
+    color: $text-dark;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     margin-bottom: 25px;
 }
+
+  
 h3 {
     font-size: 1.2rem;
     font-weight: 500;
@@ -79,3 +87,27 @@ h3 {
     text-transform: capitalize;
 }
 
+.work__title {
+    position: relative;
+    left: 15%;
+  
+    h4 {
+      position: relative;
+      margin-top: 0;
+      font-size: 20rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+      background: $text-graident; // Ensure this variable is defined as a gradient in your SCSS
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text; // For Firefox
+      &:last-child
+      {
+        position: relative;
+        left: 10%;
+        top: -4rem;
+      }
+    }
+  }

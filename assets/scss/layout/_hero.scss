@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     height: 85vh;
-    background-size: cover;
     .cube_box
 {
   position: absolute;
@@ -17,12 +16,22 @@
 
     .hero {
         position: relative;
+        
         &__title
         {
             .rocekt_img 
             {
               position: relative;
               left: -2rem;
+            }
+            .heading_shape
+            {
+                position: absolute;
+                top: -4rem;
+                img
+                {
+                    width: 8rem;
+                }
             }
         }
        &__img 
@@ -200,4 +209,16 @@
        }
     }
 
+}
+
+.hero__shape--right
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.hero__shape--left
+{
+    position: absolute;
+    bottom: 0;
 }

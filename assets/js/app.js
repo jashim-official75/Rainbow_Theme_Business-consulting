@@ -1,3 +1,67 @@
+var mySwiper = new Swiper('.our__work', {
+  loop: true,
+  speed: 600,
+  autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+  },
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 1.5,     // Set to a fixed number to control slide width
+  spaceBetween: 30,       // Adjust spacing between slides
+  coverflowEffect: {
+      rotate: 0,
+      stretch: 150,
+      depth: 300,
+      modifier: 3,
+      slideShadows: false,
+  },
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  },
+});
+
+
+
+
+gsap.utils.toArray('.service__card').forEach((card, index) => {
+  gsap.to(card, {
+    y: -100 * index,           
+    scale: 0.5,                  
+    opacity: 0,                  
+    ease: "power2.out",          
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",         
+      end: "top 20%",           
+      scrub: 1,    
+      toggleActions: "play none none reverse", 
+    }
+  });
+
+
+  gsap.to(card, {
+    opacity: 1,                 
+    scale: 1,                   
+    y: 0,                       
+    ease: "power2.out",        
+    scrollTrigger: {
+      trigger: card,
+      start: "top 80%",        
+      end: "top 20%",           
+      scrub: false,           
+      toggleActions: "reverse none none play", 
+    }
+  });
+});
+
+
+// ==========================
+// LANGUAGE TOGGLE DROPDOWN
+// ==========================
+
 function toggleDropdown() {
   const dropdownContent = document.querySelector(".language-dropdown__content");
   dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
@@ -49,6 +113,45 @@ window.addEventListener("mousemove", function (e) {
 });
 
 
+// ==========================
+// NUMBER COUNT
+// ==========================
+
+$(document).ready(function() {
+
+  function countUp() {
+      $('.number').each(function() {
+          var $this = $(this);
+          var target = $this.data('target');
+          
+          if (!$this.hasClass('counted')) {
+              $this.addClass('counted'); 
+
+              $this.animate({
+                  num: target
+              }, {
+                  duration: 5000, 
+                  step: function (now) {
+                      $this.text(Math.ceil(now) + ($this.text().includes('%') ? '%' : '+'));
+                  }
+              });
+          }
+      });
+  }
+  $(window).on('scroll', function() {
+      $('.number').each(function() {
+          var $this = $(this);
+          if ($this.is(':visible') && !$this.hasClass('counted')) {
+              countUp();
+          }
+      });
+  });
+
+
+  countUp();
+});
+
+
 
 
 // ==========================
@@ -90,12 +193,12 @@ let marqueeTween = gsap.to(".marquee__container-content", {
   x: `-=${marqueeSpeed}%`, 
   duration: 10,             
   ease: "none",            
-  repeat: -1               
+  repeat: -1             
 });
 
 ScrollTrigger.create({
   trigger: ".marquee__container", 
-  start: "top bottom",             
+  start: "10% bottom",             
   end: "bottom top",              
   onUpdate: (self) => {
     if (self.direction === -1) {   
