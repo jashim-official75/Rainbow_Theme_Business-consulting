@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- ==========SWIPER SLIDER CSS LINK========== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.css">
-
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- ==========INTER GOOGLE FONT LINK========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,8 +48,8 @@
 
         <div class="hero__shape--right">
             <img src="assets/images/Rectangle 4407.png" alt="">
-          </div>
-         
+        </div>
+
         <!-- ===================================== -->
         <!-- HEADER PART START -->
         <!-- ===================================== -->
@@ -77,7 +78,8 @@
                         <div class="language-dropdown flex align-items-center">
                             <i class="language-dropdown__icon ri-global-line ri-xl"></i>
                             <div class="language-dropdown__menu">
-                                <button class="language-dropdown__button" id="languageButton" onclick="toggleDropdown()">English</button>
+                                <button class="language-dropdown__button" id="languageButton"
+                                    onclick="toggleDropdown()">English</button>
                                 <div class="language-dropdown__content">
                                     <div class="language-dropdown__item" onclick="changeLanguage('en')">English</div>
                                     <div class="language-dropdown__item" onclick="changeLanguage('bn')">Bangla</div>
@@ -85,7 +87,7 @@
                             </div>
                             <i class="language-dropdown__arrow ri-arrow-down-s-line ri-2x"></i>
                         </div>
-                        
+
 
 
                         <div class="separator"></div>
@@ -117,15 +119,15 @@
                     </div>
 
                     <ul class="nav__menu flex">
-                        <li><a href="index.html">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                        <li><a href="#about-us">About</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#">Pages</a></li>
                         <li><a href="#">News</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
 
-                    <button class="nav__cta primary-button">Get a free quote</button>
+                    <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
                 </nav>
             </div>
 
@@ -135,22 +137,75 @@
         <!-- HEADER PART END -->
         <!-- ===================================== -->
 
-      
+        <!-- ===================================== -->
+        <!-- MOBILE HEADER PART END -->
+        <!-- ===================================== -->
+
+        <header class="mobile_header flex align-items-center justy-space-between py-3">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+          <div class="menu-icon">
+            <a href="#" class="menu-icon"><i class="ri-menu-line"></i></a>
+          </div>
+        </header>
+
+        <div class="mobile_sidbar">
+            <div class="menu__close-btn">
+                <i class="ri-close-large-line"></i>
+            </div>
+            <div class="mobile_header__logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="mobile__menu">
+                <ul>
+                    <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
+            <div class="separator"></div>
+            <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i
+                        class="ri-discuss-line"></i>
+                    support@gmail.com</a> </p>
+            <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
+            <hr>
+            
+
+        </div>
+
+        <!-- ===================================== -->
+        <!-- MOBILE HEADER PART END -->
+        <!-- ===================================== -->
+
+
+
         <!-- ===================================== -->
         <!-- HERO PART START -->
         <!-- ===================================== -->
         <main id="hero" class="hero_area">
-            <div class="hero__shape--left">
+            <div class="hero__shape--left" data-aos="fade-left">
                 <img src="assets/images/hero-left-shape.webp" alt="">
-              </div>
-    
+            </div>
+
             <div class="container">
 
                 <section class="hero">
                     <div class="cube_box rotate">
                         <img src="assets/images/3d-cube.webp" alt="">
                     </div>
-                    <h1 class="hero__title">We shape the future <span class="heading_shape"><img src="assets/images/heading-shape.webp" alt=""></span> <br> of <span class="highlight__text">business</span>
+                    <h1 class="hero__title">We shape the future <span class="heading_shape"><img
+                                src="assets/images/heading-shape.webp" alt=""></span> <br> of <span
+                            class="highlight__text">business</span>
                         <span>
                             <img src="assets/images/rocket.webp" alt="" class="rocekt_img" width="92px"></span> </h1>
                     <p class="hero__description">
@@ -180,7 +235,7 @@
                     </div>
 
                 </section>
-                <div class="hero__img">
+                <div class="hero__img" data-aos="fade-down">
                     <div class="hero__img-circle">
                         <button class="hero__img-playbutton" id="playButton"><i
                                 class="ri-play-large-fill ri-4x"></i></button>
@@ -203,9 +258,13 @@
 
         </main>
         <div class="marquee__container">
-            
+
             <div class="marquee__container-content">
-                <span> <img src="assets/images/star.svg" alt=""> CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg" alt=""> EXPERT GUIDANCE <img src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt=""> CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg" alt=""> EXPERT GUIDANCE <img src="assets/images/badge.svg" alt="">
+                <span> <img src="assets/images/star.svg" alt=""> CREATIVE <img src="assets/images/star.svg" alt="">
+                    SOLUTIONS <img src="assets/images/badge.svg" alt=""> EXPERT GUIDANCE <img
+                        src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt="">
+                    CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg"
+                        alt=""> EXPERT GUIDANCE <img src="assets/images/badge.svg" alt="">
                     CONSULTING ✦ </span>
             </div>
             <div class="marque__line">
@@ -242,15 +301,16 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                     <div class="about__info">
+
                         <div class="about__btn">
                             <a href="#" class="glow-button"> <img src="assets/images/white-arrow.webp" alt="">
                                 <span>Know
                                     more about</span></a>
                         </div>
+
                         <div class="about__info-text my-5">
                             <h2>All-in-one web solution
                                 for your business</h2>
@@ -268,6 +328,7 @@
                                     </span> </span> Contrary to popular belief is not simply random</li>
                             </ul>
                         </div>
+
                         <div class="about__cta flex align-items-center g-20">
                             <div class="about__cta-button">
                                 <div class="primary-button">More about us</div>
@@ -284,6 +345,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="company__statistics">
@@ -339,12 +401,14 @@
                             <img src="assets/images/service-one.webp" alt="">
                         </div>
                         <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-1</span></div>
+                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-1</span>
+                            </div>
                             <div class="service__card-heading">
                                 <h2>Digital Marketing</h2>
                             </div>
                             <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event.</p>
+                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
                                 <div class="Read_deatils-btn">
                                     <button class="border-btn"><span>Read Deatils</span></button>
                                 </div>
@@ -357,12 +421,14 @@
                             <img src="assets/images/about-img-two.webp" alt="">
                         </div>
                         <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-2</span></div>
+                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-2</span>
+                            </div>
                             <div class="service__card-heading">
                                 <h2>Business Strategy</h2>
                             </div>
                             <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event.</p>
+                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
                                 <div class="Read_deatils-btn">
                                     <button class="border-btn"><span>Read Deatils</span></button>
                                 </div>
@@ -375,12 +441,14 @@
                             <img src="assets/images/service-three.webp" alt="">
                         </div>
                         <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-3</span></div>
+                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-3</span>
+                            </div>
                             <div class="service__card-heading">
                                 <h2>Finance Consultant</h2>
                             </div>
                             <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event.</p>
+                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
                                 <div class="Read_deatils-btn">
                                     <button class="border-btn"><span>Read Deatils</span></button>
                                 </div>
@@ -393,12 +461,14 @@
                             <img src="assets/images/service-four.webp" alt="">
                         </div>
                         <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-4</span></div>
+                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-4</span>
+                            </div>
                             <div class="service__card-heading">
                                 <h2>One-to-one Consulting</h2>
                             </div>
                             <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With a passion for perfection and an eye for detail our dedicated team of event.</p>
+                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
                                 <div class="Read_deatils-btn">
                                     <button class="border-btn"><span>Read Deatils</span></button>
                                 </div>
@@ -428,32 +498,32 @@
                 </div>
             </div>
             <div class="our__work">
-             
+
                 <div class="swiper-wrapper our__work--wrapper">
-              
+
                     <div class="swiper-slide">
-                       <div class="our__work--wrapper--card">
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/work-one.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
+                        <div class="our__work--wrapper--card">
+                            <div class="our__work--wrapper--card--img">
+                                <img src="assets/images/work-one.webp" alt="">
                             </div>
-                            <div class="our__work--wrapper--card--content-heading">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <button class="gradient-btn--circle">
-                                        <img src="assets/images/up-arrow.svg" alt="">
-                                    </button>
+                            <div class="our__work--wrapper--card--content">
+                                <div class="our__work--wrapper--card--content-btn">
+                                    <button class="gradient-btn"><span>2024, Business</span></button>
+                                </div>
+                                <div class="our__work--wrapper--card--content-heading">
+                                    <h3>Business Consulting Service</h3>
+                                    <div class="content__cta-btn">
+                                        <button class="gradient-btn--circle">
+                                            <img src="assets/images/up-arrow.svg" alt="">
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                       </div>
                     </div>
-              
+
                     <div class="swiper-slide our__work--wrapper--card">
-                 
+
                         <div class="our__work--wrapper--card--img">
                             <img src="assets/images/about-img-one.webp" alt="">
                         </div>
@@ -470,10 +540,10 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
                     <div class="swiper-slide our__work--wrapper--card">
-                 
+
                         <div class="our__work--wrapper--card--img">
                             <img src="assets/images/about-img-one.webp" alt="">
                         </div>
@@ -490,10 +560,10 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
                     <div class="swiper-slide our__work--wrapper--card">
-                 
+
                         <div class="our__work--wrapper--card--img">
                             <img src="assets/images/about-img-one.webp" alt="">
                         </div>
@@ -510,13 +580,13 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     </div>
-              
-                   
-                  
+
+
+
                 </div>
-                <!-- If we need navigation buttons -->
+            
                 <div class="swiper-button-next">
                     <i class="ri-arrow-right-line icon-gradient"></i>
                 </div>
@@ -646,8 +716,8 @@
                             <h2>We Are Available !!</h2>
                             <span>Mon-Sat: 10:00am - 08:00pm</span>
                         </div>
-                        <div class="footer__single-social">
-                            <div class="social-icons">
+                        <div class="footer__single-social my-2">
+                            <div class="social-icons flex flex-wrap align-items-center g-15">
                                 <a href="#"><i class="ri-facebook-fill"></i></a>
                                 <a href="#"><i class="ri-twitter-fill"></i></a>
                                 <a href="#"><i class="ri-instagram-line"></i></a>
@@ -765,25 +835,28 @@
 <!-- SCRIPT HERE -->
 
 <!-- Swiper JS -->
-  <!-- Include jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Include Waypoints Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Include Waypoints Plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 
-  <!-- Include Counter Up Plugin -->
-  <script src="https://cdn.rawgit.com/bfintal/Counter-Up/master/dist/jquery.counterup.min.js"></script>
+<!-- Include Counter Up Plugin -->
+<script src="https://cdn.rawgit.com/bfintal/Counter-Up/master/dist/jquery.counterup.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+<!-- AOS JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="assets/js/app.js"></script>
+
+
 
 
 </div>
 <script>
-       
+   
     document.addEventListener('DOMContentLoaded', function () {
         const options = {
             damping: 0.1,
@@ -792,6 +865,8 @@
         };
         Scrollbar.init(document.querySelector('#scroll-container'), options);
     });
+
+
     var tl = gsap.timeline()
 
     tl.from(".header__logo", {
@@ -816,6 +891,8 @@
         opacity: 0,
         delay: 0.2,
     });
+
+  
 
 
     const waveHeading = document.querySelector(".hero__description");

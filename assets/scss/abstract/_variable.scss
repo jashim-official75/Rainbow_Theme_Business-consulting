@@ -16,7 +16,6 @@ $yellow-color:#FFA722;
 // Gradient Variables
 // ==========================
 
-
 $gradient: linear-gradient(90deg, #5163FF 12.38%, #C872F2 35.8%, #FE71B9 55.75%);
 $gradient-1:linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
 $gradient-2: linear-gradient(135deg, #FFF9FC 0%, #FCFCFD 100%);
@@ -24,6 +23,7 @@ $light-gradient: radial-gradient(64.58% 59% at 37.13% 12%, rgba(255, 255, 255, 0
 $text-graident: linear-gradient(130.68deg, rgba(81, 99, 255, 0.08) 27.01%, rgba(254, 113, 185, 0.02) 113.08%);
 $border-gradient: linear-gradient(180deg, rgba(15, 52, 248, 0.47) 0%, rgba(9, 31, 146, 0) 100%);
 $btn-gradient: linear-gradient(102.44deg, #5163FF -0.32%, #FE71B9 100%);
+$dark-footer-gradient:linear-gradient(145.12deg, rgba(254, 113, 185, 0.04) -2.12%, rgba(20, 2, 73, 0.01) 121.13%);
 
 // ==========================
 // Alpha Colors Variables
@@ -31,6 +31,12 @@ $btn-gradient: linear-gradient(102.44deg, #5163FF -0.32%, #FE71B9 100%);
 
 $light-color-1: rgba(255,255,255,0.1);
 $light-color-2: rgba(255,255,255,0.2);
+$light-color-4: rgba(255,255,255,0.4);
+$light-color-5: rgba(255,255,255,0.5);
+$light-color-6: rgba(255,255,255,0.6);
+$light-color-7: rgba(255,255,255,0.7);
+$light-color-8: rgba(255,255,255,0.8);
+$light-color-9: rgba(255,255,255,0.9);
 
 // ==========================
 // Font and Typography Variables

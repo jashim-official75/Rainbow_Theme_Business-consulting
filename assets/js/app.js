@@ -1,27 +1,42 @@
+AOS.init({
+  duration: 1000,
+  easing: 'ease-in-out',
+  once: true,
+  mirror: false,
+});
+
+
+const swiperContainer = document.querySelector('.our__work');
+const slides = swiperContainer.querySelectorAll('.swiper-slide');
+
+const shouldLoop = slides.length > 2;  // Enable loop only if more than 2 slides
+
 var mySwiper = new Swiper('.our__work', {
-  loop: true,
+  loop: shouldLoop,           // Set loop conditionally based on slide count
+  loopedSlides: slides.length > 5 ? 5 : slides.length, // Number of looped slides
   speed: 600,
   autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
+    delay: 4000,
+    disableOnInteraction: false,
   },
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: 1.5,     // Set to a fixed number to control slide width
-  spaceBetween: 30,       // Adjust spacing between slides
+  slidesPerView: 3,
+  spaceBetween: 30,
   coverflowEffect: {
-      rotate: 0,
-      stretch: 150,
-      depth: 300,
-      modifier: 3,
-      slideShadows: false,
+    rotate: 0,
+    stretch: 10,
+    depth: 100,
+    modifier: 3,
+    slideShadows: false,
   },
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
+
 
 
 

@@ -13,8 +13,8 @@
             &--card
             {
                 position: relative;
-                width: 500px;
-                height: 400px;
+                width: 200px;
+                height: 500px;
                 border: 0.4rem solid $light-color;
                 @include box-shadow($dark-shadow-2);
                 overflow: hidden;

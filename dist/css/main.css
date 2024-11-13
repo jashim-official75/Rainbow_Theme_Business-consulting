@@ -359,7 +359,7 @@ html, body {
 }
 
 body::-webkit-scrollbar {
-  width: 0;
+  width: 1rem;
 }
 
 main {
@@ -630,7 +630,7 @@ h3 {
       flex-wrap: wrap;
 }
 
-.flex-center, .quote_icon, .about_area .company__statistics .statistics__card, .about_area .about__info-text ul li .circle_dot, .about_area .about__circle .circle-logo, .about_area .about__circle, .hero_area .hero__social-proof::before, .hero_area .hero__social-proof::after, .hero_area .hero__img-playbutton, .nav__icons .cart-icon .cart-count, .popup__close-btn {
+.flex-center, .quote_icon, .footer_area .footer__single-social .social-icons a, .about_area .company__statistics .statistics__card, .about_area .about__info-text ul li .circle_dot, .about_area .about__circle .circle-logo, .about_area .about__circle, .hero_area .hero__social-proof::before, .hero_area .hero__social-proof::after, .hero_area .hero__img-playbutton, .nav__icons .cart-icon .cart-count, .popup__close-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,6 +660,12 @@ h3 {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.justify-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .g-5 {
@@ -1437,6 +1443,101 @@ section {
 .footer_area .footer__single-desc p {
   font-size: 1.6rem;
 }
+.footer_area .footer__single-info {
+  margin-bottom: 2rem;
+}
+.footer_area .footer__single-info h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer_area .footer__single-info span {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.footer_area .footer__single-social .social-icons a {
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.footer_area .footer__single-social .social-icons a i {
+  font-size: 2rem;
+  color: #fff;
+}
+.footer_area .footer__single-social .social-icons a:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#708BFD), to(#FE71B9));
+  background: linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
+}
+.footer_area .footer__single-column {
+  background: linear-gradient(145.12deg, rgba(254, 113, 185, 0.04) -2.12%, rgba(20, 2, 73, 0.01) 121.13%);
+  padding: 1rem;
+}
+.footer_area .footer__single-column-title h2 {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 600;
+  color: #fff;
+}
+.footer_area .footer__single-column-title ul li {
+  padding: 1.5rem 0;
+}
+.footer_area .footer__single-column-title ul li a {
+  position: relative;
+  left: 1rem;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+.footer_area .footer__single-column-title ul li a::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: -1.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("/assets/images/arrow.webp");
+  background-size: 1rem;
+}
+.footer_area .footer__single-column-single-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+.footer_area .footer__single-column-single-event .event__img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.footer_area .footer__single-column-single-event .event__img:hover {
+  border-color: #5163FF;
+}
+.footer_area .footer__single-column-single-event .event__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.footer_area .footer__single-column-even_info h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.footer_area .footer__single-column-even_info span {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
 
 #services {
   position: relative;
@@ -1499,8 +1600,8 @@ section {
 }
 .our-work-area .our__work--wrapper--card {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 200px;
+  height: 500px;
   border: 0.4rem solid #fff;
   -webkit-box-shadow: 20px 15px 36px 0px rgba(0, 35, 75, 0.15);
   box-shadow: 20px 15px 36px 0px rgba(0, 35, 75, 0.15);
