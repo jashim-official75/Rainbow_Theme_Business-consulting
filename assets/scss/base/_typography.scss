@@ -1,0 +1,81 @@
+//===== COMMON STYLES====//
+
+@import '../utilities/animation';
+@import '../utilities/transform';
+// =====================
+// pargraph style
+// =====================
+
+p {
+    color: $text-color;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+
+
+// =====================
+// h1 style
+// =====================
+
+h1 {
+    position: relative;
+    font-size: clamp(4rem, 5vw, 10rem); 
+    margin: 5.87rem  0 2.37rem;
+    font-weight: 600;
+    color: $text-dark;
+
+}
+
+
+// =====================
+// a style
+// =====================
+a {
+    background-color: transparent;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    text-decoration: none;
+    
+    // z-index: 2;
+    cursor: pointer;
+
+    &:active {
+        transform: scale(0.8);
+    }
+}
+
+
+
+// =====================
+// h2 style
+// =====================
+h2 {
+    font-size: clamp(1.2rem, 2vw, 2rem); 
+    font-weight: 600;
+    color: $dark-color;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+}
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.service_title 
+{
+    font-size: clamp(2.5rem, 5vw, 4.8rem); 
+    color: $text-dark;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+

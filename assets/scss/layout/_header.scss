@@ -1,0 +1,114 @@
+@import "../utilities//border-radius";
+@import "../utilities/box-shadow";
+@import "../utilities/transition";
+
+.header
+{
+    position: relative;
+    top: 2rem;
+    &__top-bar 
+    {
+       background: $offwhite-color;
+       padding: 1.5rem;
+       @include border-radius(10px);
+       @include box-shadow($shadow);
+       
+
+    }
+    &__info 
+    {
+        p , a
+        {
+            color: $text-color;
+            text-decoration: none;
+        }
+    }
+    .header__language-social {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.6rem;
+        color: $text-color;
+    
+      
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+    
+            a {
+                color: $text-color;
+                font-size: 1.6rem;
+                text-decoration: none;
+                @include transition(1s ease);
+    
+                &:hover {
+                    color: $theme-color; 
+                }
+            }
+        }
+    }
+    
+}
+
+.nav
+{
+    position: relative;
+    color: $text-color;
+    border-bottom: 0.1rem solid $theme-color-alpha;
+    padding: 1rem 0;
+    &__icons
+    {
+        a 
+        {
+            color: $text-color;
+            font-size: 1.6rem;
+            text-decoration: none;
+            i 
+            {
+                font-size: 2.5rem;
+            }
+        }
+        .cart-icon
+        {
+            position: relative;
+            .cart-count 
+            {
+                position: absolute;
+                top: -1rem;
+                right: -0.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                transform: scale(0.8);
+                background: $theme-color;
+                @extend .flex-center;
+                color: $light-color;
+                font-size: 1rem;
+                font-weight: 700;
+                @include border-radius(50%);
+            }
+        }
+    }
+    &__menu
+    {
+      position: relative;
+      padding: 2rem 0;
+   
+      li
+      {
+        a 
+        {
+            color: $text-color;
+            font-weight: 500;
+            display: inline-block;
+            font-size: 1.6rem;
+            text-decoration: none;
+            padding: 0 1rem;
+            &:hover 
+            {
+                color: $theme-color;
+            }
+        }
+      }
+    }
+}

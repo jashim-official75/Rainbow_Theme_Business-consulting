@@ -1,0 +1,15 @@
+#services
+{
+    position: relative;
+    background: $gradient-2;
+    padding: 5rem;
+    .section_union
+    {
+        position: absolute;
+        left: 0;
+    }
+    .service
+    {
+        position: relative;
+    }
+}

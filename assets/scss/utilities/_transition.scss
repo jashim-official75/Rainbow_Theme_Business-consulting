@@ -1,0 +1,32 @@
+// ┌────────────┐
+// │ Transition │
+// └────────────┘
+$transition-prefixes: webkit, moz, o, ms;
+
+@mixin transition($value...) {
+  @include transition-prefixed($value);
+}
+
+@mixin transition-prefixed($value...) {
+  -webkit-transition: $value;
+     -moz-transition: $value;
+       -o-transition: $value;
+       -ms-transition: $value;
+          transition: $value;
+}
+
+@mixin transition-property($value...) {
+  @include transition-prefixed($value);
+}
+
+@mixin transition-duration($value...) {
+  @include transition-prefixed($value);
+}
+
+@mixin transition-timing-function($value...) {
+  @include transition-prefixed($value);
+}
+
+@mixin transition-delay($value...) {
+  @include transition-prefixed($value);
+}

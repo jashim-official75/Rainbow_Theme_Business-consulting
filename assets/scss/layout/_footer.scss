@@ -1,0 +1,21 @@
+.footer_area
+{
+    position: relative;
+    background: $foooter-bg;
+   padding: 2rem;
+   .footer 
+   {
+    &__single-logo
+    {
+        width: 100%;
+    }
+    &__single-desc
+    {
+        padding-right: 2rem;
+        p 
+        {
+            font-size: 1.6rem;
+        }
+    }
+   }
+}

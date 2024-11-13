@@ -1,0 +1,220 @@
+.about_area {
+    padding: 20rem 0 0;
+
+    .union_image {
+        position: absolute;
+        right: 0;
+    }
+
+    .about {
+        position: relative;
+
+        &__img {
+            position: relative;
+        }
+
+        &__images {
+            &-wrap {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                .about_one {
+                    width: 250px;
+                    border-radius: 15px;
+                    border: 3px solid $light-color;
+                }
+
+            }
+
+            &-single {
+                position: absolute;
+                bottom: -8rem;
+                left: 80%;
+                width: 250px;
+                height: 300px;
+                border: 0.6rem solid $light-color;
+                @include border-radius(1rem);
+                overflow: hidden;
+
+                .about_two {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__circle {
+            border: 2px dashed $border-color-alpha;
+            width: 160px;
+            height: 160px;
+            @include border-radius(50%);
+            @extend .flex-center;
+            position: absolute;
+            right: 35%;
+
+            .circle_img {
+                width: 95%;
+            }
+
+            .circle-logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 6rem;
+                height: 6rem;
+                border: 2px dashed $border-color-alpha;
+                @include border-radius(50%);
+                @extend .flex-center;
+
+                img {
+                    width: 60%;
+                    height: 60%;
+                }
+
+            }
+        }
+
+        &__info
+        {
+            position: relative;
+            width: 100%;
+            &-text
+            {
+                h2 
+                {
+                    font-size: clamp(2.5rem, 5vw, 4rem);
+                    color: $text-dark;
+                    font-weight: 600;
+                    line-height: 1.2;
+                }
+                p 
+                {
+                    font-size: 1.8rem;
+                }
+                ul 
+                {
+                    margin: 3rem 0;
+                    li 
+                    {
+                        position: relative;
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        color: $text-color;
+                        margin: 3rem 0;
+                        left: 5rem;
+                      .circle_dot {
+                            position: absolute;
+                            left: -4rem;
+                            top: -0.5rem;
+                            width: 2.6rem;
+                            height: 2.6rem;
+                            background: $light-color;
+                            @include box-shadow ($dark-shadow);
+                            @include border-radius(50%);
+                            @extend .flex-center;
+                        }
+                        
+                        
+                    }
+                }
+            }
+        }
+
+        &__cta-ceo-intro
+        {
+            .ceo-img 
+            {
+                position: relative;
+                width: 6rem;
+                height: 6rem;
+                @include border-radius(50%);
+                @include box-shadow($dark-shadow-1);
+                img 
+                {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                @include border-radius(50%);
+
+                }
+
+                &::after
+                {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $border-gradient;
+                    z-index: -1;
+                    transform: scale(1.1);
+                    @include border-radius(50%);
+                }
+              
+            }
+            .ceo-title 
+            {
+                position: relative;
+                top: 1rem;
+                img 
+                {
+                    width: 100px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                .hr 
+                {
+                    width: 100%;
+                    height: 1px;
+                    background: $text-dark-alpha;
+                    margin: 1rem 0 0.5rem;
+                }
+                h3 
+                {
+                    font-size: 1.4rem;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+
+    .company__statistics 
+    {
+        position: relative;
+        padding-top: 5rem;
+        .statistics
+        {
+            &__card
+            {
+                position: relative;
+                width: 200px;
+                height: 200px;
+                @extend .flex-center;
+                flex-direction: column;
+                gap: 1rem;
+                border-top: 2px solid $text-dark-alpha;
+                @include transition(all .3s ease-in-out);
+                cursor: pointer;
+                &:hover
+                {
+                    border-color: $theme-color;
+                }
+                .number 
+                {
+                    font-size: 5rem;
+                    font-weight: 400;
+                    color: $text-dark;
+                }
+                h3 
+                {
+                    text-align: center;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

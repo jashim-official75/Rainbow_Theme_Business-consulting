@@ -1,0 +1,64 @@
+.language-dropdown {
+    position: relative;
+    
+    &__icon
+    {
+        position: absolute;
+        font-size: 2rem;
+        left: -1rem;
+    }
+    &__arrow {
+        position: absolute;
+        top: 1.2rem;
+        right: -0.5rem;
+      font-size: 1.8rem;
+    }
+  
+    &__menu {
+      position: relative;
+    }
+  
+    &__button {
+      padding: 10px 15px;
+      background: transparent;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+  
+    }
+  
+    &__content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $theme-color;
+      min-width: 16rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  
+    &__item {
+      color: $light-color;
+      padding: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid $light-color-1;
+      @include transition(all .3s ease-in-out);
+      &:last-child
+      {
+        border: none;
+      }
+  
+      &:hover {
+        background-color: $dark-color;
+      }
+    }
+  }
+  

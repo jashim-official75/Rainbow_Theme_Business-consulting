@@ -1,0 +1,84 @@
+
+
+// @import '../utilities/animation';
+// @import '../utilities/transform';
+
+// .rotate
+// {
+//     @include animation(rotate 1s linear infinite);
+// }
+
+// @include keyframes(pop)
+// {
+//     0%{
+//         @include transform(scale(1));
+//     }
+//     50% {
+//         @include transform(scale(1.1));
+//     }
+   
+//     100% {
+//         @include transform(scale(1));
+//     }
+// }
+
+
+// .pop
+// {
+//     @include animation(pop 0.2s  linear forwards);
+// }
+
+// @include keyframes(pop)
+// {
+//     0%{
+//         @include transform(scale(1));
+//     }
+//     50% {
+//         @include transform(scale(1.1));
+//     }
+   
+//     100% {
+//         @include transform(scale(1));
+//     }
+// }
+
+
+// .glow 
+// {
+//     @include animation(glow 1500ms ease-out infinite);
+// }
+// @include keyframes(glow)
+// {
+//     0%,20% {
+//         @include transform(scale(1));
+//         opacity: 1;
+//       }
+//       100% {
+//         @include transform(scale(2.5));
+//         opacity: 0;
+//       }
+// }
+
+
+
+.marquee__container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: $gradient-1;
+    padding: 10px 0;
+    z-index: 100;
+
+      &-content
+      {
+        display: inline-block;
+        white-space: nowrap;
+        font-size: clamp(3rem, 5vw, 8rem); 
+        font-weight: bold;
+        color: transparent; 
+        -webkit-text-stroke: 1px $light-color; 
+        text-stroke: 1px $light-color; 
+      }
+  }
+  
+  
