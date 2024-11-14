@@ -334,14 +334,14 @@ section
     }
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 520px) {
     .container {
       padding: 0 10px;
     }
 
     .grid-5 
     {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
   
     }
   }

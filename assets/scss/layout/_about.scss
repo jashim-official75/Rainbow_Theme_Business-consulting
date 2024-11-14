@@ -31,10 +31,21 @@
                     width: 280px;
                     border-radius: 15px;
                     border: 3px solid $light-color;
+                    img 
+                    {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    @include respond('991')
+                    {
+                        width: 250px;
+
+                    }
                     @include respond('768')
                     {
                         width: 50%;
                     }
+
                 }
 
             }
@@ -47,6 +58,12 @@
                 height: 350px;
                 border: 0.6rem solid $light-color;
                 @include border-radius(1rem);
+                @include respond('1180')
+                {
+                    left: 50%;
+                    width: 250px;
+                    height: 300px;
+                }
 
                 @include respond('768')
                 {
@@ -54,7 +71,10 @@
                     left: 50%;
                     bottom: 0;
                 }
-                
+                @include respond('520')
+                {
+                    display: none;
+                }
                 overflow: hidden;
 
                 .about_two {
@@ -86,12 +106,22 @@
                 right: 15%;
             }
 
+            @include respond('991')
+            {
+                right: 8%;
+            }
+
             @include respond('768')
             {
                 right: 16%;
                 top: 0;
             }
-
+            @include respond('520')
+            {
+                top: 50%;
+                transform: translateY(-50%);
+               right: 5%;
+            }
             .circle_img {
                 width: 100%;
             }
@@ -265,6 +295,13 @@
                 gap: 1rem;
                 border-top: 2px solid $text-dark-alpha;
                 @include transition(all .3s ease-in-out);
+                @include respond('520')
+                {
+                    width: 100%;
+                    height: 150px;
+                    align-items: center;
+                    gap: 0;
+                }
                 cursor: pointer;
                 &:hover
                 {
@@ -281,6 +318,8 @@
                     text-align: center;
                     font-size: 1.6rem;
                     color: $text-color;
+                    margin-bottom: 0;
+                    margin-top: 1rem;
                 }
             }
         }
