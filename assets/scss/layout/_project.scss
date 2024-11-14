@@ -23,6 +23,10 @@
         font-size: 1.8rem;
         font-weight: 400;
         max-width: 400px;
+        @include respond('768')
+        {
+            display: none;
+        }
     }
    }
     .our__work {
@@ -47,12 +51,18 @@
                 border: 0.4rem solid $light-color;
                 @include box-shadow($dark-shadow-2);
                 overflow: hidden;
-
+                @include respond('768')
+                {
+                    width: 150px;
+                    height: 400px;
+                }
                 @include respond('480')
                 {
                     width: 150px;
                     height: 300px;
                 }
+
+
               
                 &--img 
                 {
@@ -114,5 +124,9 @@
     top: 30%;
     transform: translateY(-30%) scale(1.2);
     right: 17%;
-   
+    @include respond('768')
+    {
+        top: 10%;
+        right: 10%;
+    }
 }

@@ -50,6 +50,11 @@
                 position: absolute;
                 top: -4rem;
 
+                @include respond('520')
+                {
+                    display: none;
+                }
+
                 img {
                     width: 8rem;
                 }

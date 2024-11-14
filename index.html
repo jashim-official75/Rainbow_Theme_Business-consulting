@@ -142,20 +142,50 @@
         <!-- MOBILE HEADER PART END -->
         <!-- ===================================== -->
 
-         <div class="mobile_header">
+        <header class="mobile_header w-100">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/logo.svg" alt="">
                 </a>
             </div>
-            <div class="menu-icon" onclick="openSidebar()">
-             <i class="ri-menu-line"></i>
+            <div class="menu__icon">
+                <i class="ri-menu-line"></i>
             </div>
-            
-        </div> 
-
+        </header>
+        
+        <!-- Overlay for dark background -->
+        <div class="overlay"></div>
+        
+        <!-- Sidebar -->
+        <div class="mobile_sidebar">
+            <div class="menu__close-btn">
+                <i class="ri-close-line"></i>
+            </div>
+            <div class="mobile_header__logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="mobile__menu">
+                <ul>
+                    <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
+            <div class="separator"></div>
+            <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i class="ri-discuss-line"></i> support@gmail.com</a> </p>
+            <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
+            <hr>
+        </div>
+        
        
-        <div class="overlay" onclick="closeSidebar()"></div>
+      
 
         <!-- ===================================== -->
         <!-- MOBILE HEADER PART END -->
@@ -847,7 +877,7 @@
                                 target="_blank" class="highlight__text">Rainbow Themes</a>. All Rights Reserved.</span>
                     </div>
                     <div class="footer_links">
-                        <ul class="flex g-10 align-items-center">
+                        <ul class="flex g-10 align-items-center flex-wrap">
                             <li><a href="#">Terms & Condition</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Support</a></li>
@@ -895,39 +925,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script>
-const menuIcon = document.querySelector(".menu-icon");
-const sideBar = document.querySelector(".mobile_sidebar");
 
-menuIcon.addEventListener("click", () => {
-  sidebar.classList.toggle("active");
-  console.log("Hellow");
-});
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const menuIcon = document.querySelector('.menu-icon');
-//   const sidebar = document.querySelector('.mobile_sidebar');
-//   const overlay = document.querySelector('.overlay');
-//   const closeButton = document.querySelector('.menu__close-btn');
-
-//   function openSidebar() {
-//       sidebar.classList.add('active');
-//       overlay.style.display = 'block';
-//       document.body.style.overflow = 'hidden';
-//       console.log("sidebarOpen");
-//   }
-
-//   function closeSidebar() {
-//       sidebar.classList.remove('active');
-//       overlay.style.display = 'none';
-//       document.body.style.overflow = 'auto';
-
-//   }
-
-//   menuIcon.addEventListener('click', openSidebar);
-//   closeButton.addEventListener('click', closeSidebar);
-//   overlay.addEventListener('click', closeSidebar);
-// });
 
 
 
@@ -940,6 +938,34 @@ menuIcon.addEventListener("click", () => {
             Scrollbar.init(document.querySelector('#scroll-container'), options);
         });
 
+
+        // Document ready function
+$(document).ready(function() {
+  // Get elements
+  const $menuIcon = $('.menu__icon');
+  const $sidebar = $('.mobile_sidebar');
+  const $overlay = $('.overlay');
+  const $closeButton = $('.menu__close-btn');
+
+  // Function to open sidebar
+  function openSidebar() {
+    $sidebar.addClass('active');
+    $overlay.show();
+    $('body').css('overflow', 'hidden');
+  }
+
+  // Function to close sidebar
+  function closeSidebar() {
+    $sidebar.removeClass('active');
+    $overlay.hide();
+    $('body').css('overflow', 'auto');
+  }
+
+  // Event listeners
+  $menuIcon.on('click', openSidebar);
+  $closeButton.on('click', closeSidebar);
+  $overlay.on('click', closeSidebar);
+});
 
  
 

@@ -11,11 +11,13 @@
       align-items: center;
       justify-content: space-between;
     }
-    .menu-icon
+    .menu__icon
     {
+        position: relative;
+        z-index: 10;
         width: 5rem;
         height: 5rem;
-        background: $theme-color;
+        background: $dark-color;
         @extend .flex-center;
         cursor: pointer;
         &:hover 

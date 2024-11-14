@@ -7,6 +7,18 @@
     {
         padding: 3rem;
     }
+    @include respond('991')
+    {
+        padding: 2rem;
+    }
+    @include respond('768')
+    {
+        padding: 1rem;
+    }
+    @include respond('520')
+    {
+        padding:3rem 1rem;
+    }
     .section_union
     {
         position: absolute;
@@ -22,6 +34,7 @@
             padding: 5rem;
             @include box-shadow($white-shadow);
             @include border-radius(1rem);
+            margin-bottom: 1rem;
             @include respond('991')
             {
                 flex-direction: column;

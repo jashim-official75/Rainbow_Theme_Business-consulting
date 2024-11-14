@@ -84,19 +84,36 @@
         }
 
         &__single {
+            position: relative;
             background: $dark-footer-gradient;
-            padding: 2rem;
+            padding: 5rem;
             @include box-shadow($footer-shadow);
+            @include respond('520')
+            {
+                padding: 1rem;
+            }
+         
             @include border-radius(1rem);
+            &::after
+            {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 20%;
+                height: 0.2rem;
+                width: 80px;
+                background: $btn-gradient;
+                filter: blur(0.2rem);
+                opacity: 0.5;
+            }
             &-column {
 
                
-
-                @include respond('small') {
+                @include respond('520') {
                     padding: 1rem;
                 }
 
-                @include respond('medium') {
+                @include respond('768') {
                     padding: 2rem;
                 }
 
@@ -117,7 +134,7 @@
                             padding-bottom: 4rem;
                             @include respond('768')
                             {
-                                padding-bottom: 1rem;
+                                padding-bottom: 1.5rem;
                             }
 
                             a {
@@ -180,10 +197,33 @@
                             object-fit: cover;
                         }
                     }
+                    &:hover 
+                    {
+                        h3
+                        {
+                            &::after 
+                            {
+                                width: 100%;
+                            }
+                        }
+                    }
 
                     h3 {
+                        position: relative;
                         margin-bottom: 0.5rem;
                         font-weight: 500;
+                        padding-bottom: 0.2rem;
+                        &::after
+                        {
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            height: 1px;
+                            background: $light-color;
+                            bottom: 0;
+                            left: 0;
+                            @include transition(all .3s ease-in-out);
+                        }
                     }
 
                     span {
@@ -194,8 +234,6 @@
                 }
 
             }
-
-
         }
 
         &__newsletter {
