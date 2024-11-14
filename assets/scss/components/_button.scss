@@ -65,12 +65,6 @@
   color: $light-color;
   font-size: 1.6rem;
 
-  @include respond('768') {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-  }
 
   @include border-radius(5rem);
   letter-spacing: normal;

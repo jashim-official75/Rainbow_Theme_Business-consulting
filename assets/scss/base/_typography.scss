@@ -104,6 +104,14 @@ h3 {
       position: relative;
       margin-top: 0;
       font-size: 20rem;
+      @include respond('1280')
+      {
+        font-size: 18rem;
+      }
+      @include respond('1180')
+      {
+        font-size: 14rem;
+      }
       @include respond('768')
       {
         font-size: 5rem;

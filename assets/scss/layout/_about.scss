@@ -1,6 +1,9 @@
 .about_area {
     padding: 10rem 0 0;
-
+    @include respond('480')
+    {
+        padding-top: 3rem;
+    }
     .union_image {
         position: absolute;
         right: 0;
@@ -74,6 +77,11 @@
             @include respond('1280')
             {
                 right: 23%;
+            }
+            
+            @include respond('1180')
+            {
+                right: 15%;
             }
 
             @include respond('768')

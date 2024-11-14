@@ -1,6 +1,10 @@
 .testimonial--slider {
   background: $offwhite-color;
   padding: 15rem 10px;
+  @include respond('480')
+  {
+    padding: 5rem 0 8rem;
+  }
   position: relative;
   overflow: hidden;
   .testomonail__arrow
@@ -8,7 +12,7 @@
     @include respond('1280')
     {
         position: absolute;
-        bottom: 5rem;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
     
@@ -94,6 +98,11 @@
   min-width: 700px;
   width: 700px;
   margin: 10rem 0 5rem;
+
+  @include respond('480')
+  {
+    font-size: 1.4rem;
+  }
 }
 
 .testimonila_star {

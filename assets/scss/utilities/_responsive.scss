@@ -19,6 +19,10 @@
     @media (max-width: #{$breakpoint-991}) {
       @content;
     }
+  } @else if $breakpoint == '1180' {
+    @media (max-width: #{$breakpoint-1180}) {
+      @content;
+    }
   } @else if $breakpoint == '1280' {
     @media (max-width: #{$breakpoint-1280}) {
       @content;

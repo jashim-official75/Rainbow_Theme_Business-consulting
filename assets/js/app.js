@@ -77,7 +77,7 @@ var mySwiper = new Swiper('.our__work', {
       spaceBetween: 10,
     },
     480: {
-      slidesPerView: 1.5,
+      slidesPerView: 1,
       spaceBetween: 5,
     },
     450: {
@@ -99,21 +99,21 @@ var mySwiper = new Swiper('.our__work', {
 // ==========================
 // GSAP SCROLL ANIMATION FOR SERVICE CARDS
 // ==========================
-gsap.utils.toArray('.service__card').forEach((card, index) => {
-  gsap.to(card, {
-    y: -100 * index,
-    scale: 0.5,
-    opacity: 0,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: card,
-      start: "top 80%",
-      end: "top 20%",
-      scrub: 1,
-      toggleActions: "play none none reverse",
-    }
-  });
-});
+// gsap.utils.toArray('.service__card').forEach((card, index) => {
+//   gsap.to(card, {
+//     y: -100 * index,
+//     scale: 0.5,
+//     opacity: 0,
+//     ease: "power2.out",
+//     scrollTrigger: {
+//       trigger: card,
+//       start: "top 80%",
+//       end: "top 20%",
+//       scrub: 1,
+//       toggleActions: "play none none reverse",
+//     }
+//   });
+// });
 
 // ==========================
 // LANGUAGE TOGGLE DROPDOWN

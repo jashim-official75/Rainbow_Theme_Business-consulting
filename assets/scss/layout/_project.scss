@@ -9,6 +9,7 @@
     .swiper-slide-active {
         .our__work--wrapper--card--content {
             bottom: 0;
+            transform: scale(1);
         }
     }
    .subheading 
@@ -28,9 +29,14 @@
         position: relative;
         top: -15rem;
         overflow: hidden;
+        @include respond('1280')
+        {
+            top: -6rem;
+        }
         @include respond('480')
         {
             width: 80%;
+            top: 0;
             margin: 0 auto;
         }
         &--wrapper {
@@ -41,6 +47,12 @@
                 border: 0.4rem solid $light-color;
                 @include box-shadow($dark-shadow-2);
                 overflow: hidden;
+
+                @include respond('480')
+                {
+                    width: 150px;
+                    height: 300px;
+                }
               
                 &--img 
                 {
@@ -58,6 +70,7 @@
                 &--content {
                     position: absolute;
                     bottom: -20rem;
+                    transform: scale(1);
                     width: 100%;
                     padding: 3rem;
                     @include transition(all 0.3s ease-in-out);

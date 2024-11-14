@@ -175,7 +175,6 @@
             }
             @include respond('520')
             {
-                flex-direction: column;
                 justify-content: center;
             } 
             &::after {
