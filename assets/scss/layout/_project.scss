@@ -40,7 +40,7 @@
         @include respond('480')
         {
             width: 80%;
-            top: 0;
+            top: 3rem;
             margin: 0 auto;
         }
         &--wrapper {
@@ -56,9 +56,14 @@
                     width: 150px;
                     height: 400px;
                 }
+                @include respond('520')
+                {
+                    height: 300px;
+                    padding: 0 2rem;
+                }
                 @include respond('480')
                 {
-                    width: 150px;
+                    width: 80%;
                     height: 300px;
                 }
 
@@ -128,5 +133,10 @@
     {
         top: 10%;
         right: 10%;
+    }
+    @include respond('520')
+    {
+        top: 18%;
+        right: 15%;
     }
 }

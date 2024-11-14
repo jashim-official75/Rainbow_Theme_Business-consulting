@@ -88,6 +88,10 @@
             background: $dark-footer-gradient;
             padding: 5rem;
             @include box-shadow($footer-shadow);
+            @include respond('991') 
+            {
+                padding: 2rem;
+            }
             @include respond('520')
             {
                 padding: 1rem;
