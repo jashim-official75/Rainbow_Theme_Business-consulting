@@ -188,6 +188,7 @@
             @include respond('768') 
             {
                 padding: 2rem 0;
+                display: none;
             }
             @include respond('520')
             {

@@ -122,6 +122,14 @@ var mySwiper = new Swiper('.our__work', {
       slidesPerView: 1,
       spaceBetween: 5,
     },
+    380: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    350: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
   },
 });
 

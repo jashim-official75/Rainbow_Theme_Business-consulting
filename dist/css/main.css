@@ -772,6 +772,14 @@ h1 {
   h1 {
     margin: 0;
     text-align: center;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 520px) {
+  h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 3rem;
   }
 }
 
@@ -1612,6 +1620,7 @@ section {
 @media (max-width: 768px) {
   .hero_area .hero__social-proof {
     padding: 2rem 0;
+    display: none;
   }
 }
 @media (max-width: 520px) {
