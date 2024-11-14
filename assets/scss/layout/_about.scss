@@ -1,4 +1,5 @@
 .about_area {
+    position: relative;
     padding: 10rem 0 0;
     @include respond('480')
     {
@@ -7,6 +8,7 @@
     .union_image {
         position: absolute;
         right: 0;
+        top: 0;
     }
 
     .about {

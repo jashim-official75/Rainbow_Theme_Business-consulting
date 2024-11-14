@@ -126,6 +126,12 @@
   overflow: hidden;
   cursor: pointer;
 
+  @include respond('520')
+  {
+    padding: 1.4rem 2rem;
+    font-size: 1.6rem;
+  }
+
   span {
     position: relative;
     z-index: 10;

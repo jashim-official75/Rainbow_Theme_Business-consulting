@@ -22,7 +22,7 @@
   height: 100vh;
   overflow-y: auto;
   z-index: 10000000;
-  @include transition(all 1s ease-in-out);
+  @include transition(all 0.3s ease-in-out);
 
   &.active {
     left: 0;
@@ -64,16 +64,20 @@
 
   hr {
     border: none;
-    border-top: 1px solid $border-color-alpha;
+    border-top: 1px solid $light-color-2;
     margin: 15px 0;
   }
   
   .header__location, .header__email {
     font-size: 14px;
-    color: $text-color;
+    color: $light-color;
     display: flex;
     align-items: center;
-    margin: 15px 0;
+    margin: 15px 0 0;
+    a 
+    {
+      color: $light-color;
+    }
   }
 
   .nav__cta {

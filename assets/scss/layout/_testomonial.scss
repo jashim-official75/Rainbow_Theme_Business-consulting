@@ -12,10 +12,14 @@
     @include respond('1280')
     {
         position: absolute;
-        bottom: 0;
-        left: 50%;
+        bottom: 2rem;
+        left: 40%;
         transform: translateX(-50%);
     
+    }
+    @include respond('1180') 
+    {
+
     }
     .swiper-button-next 
     {
@@ -100,11 +104,11 @@
   margin: 8rem auto 2rem;
   @include respond('768')
   {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   @include respond('520')
   {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   @include respond('480')
@@ -190,8 +194,12 @@
 
 .swiper-pagination {
   position: absolute;
-  top: 5rem !important;
+  top: 5rem ;
   padding: 5rem 0;
+  @include respond('1280')
+  {
+    top: -2rem;
+  }
 }
 
 .quote_icon {
@@ -202,15 +210,10 @@
   background: $theme-color;
 }
 
-/* ================= RESPONSIVE IPAD PRO ====================== */
-@media only screen and (max-width: 1024px) {
-  .testimonial-left--thumb,
-  .testimonial-right--thumb {
-    display: none;
-  }
-}
 
-/* ================= RESPONSIVE IPHONE ====================== */
+// common style for swiper js
+
+
 @media only screen and (max-width: 480px) {
   .slider-row .swiper {
     width: 100%;
@@ -222,20 +225,14 @@
     height: 70px;
   }
 
-  .testimonial-heading {
-    margin-bottom: 15px;
-    font-size: 30px;
-    line-height: 34px;
-  }
-
   .creative-testimonial--slider .slider-row .swiper-pagination {
-    margin-top: 15px;
+    margin-top: 1.5rem;
   }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  font-size: 24px; /* Adjust icon size */
+  font-size: 24px; 
   display: flex;
   align-items: center;
   justify-content: center;

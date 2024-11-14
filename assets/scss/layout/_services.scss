@@ -1,94 +1,102 @@
-#services
-{
+#services {
     position: relative;
     background: $gradient-2;
+    overflow: hidden;
     padding: 5rem;
-    @include respond('1280')
-    {
+
+    @include respond('1280') {
         padding: 3rem;
     }
-    @include respond('991')
-    {
+
+    @include respond('991') {
         padding: 2rem;
     }
-    @include respond('768')
-    {
+
+    @include respond('768') {
         padding: 1rem;
     }
-    @include respond('520')
-    {
-        padding:3rem 1rem;
+
+    @include respond('520') {
+        padding: 3rem 1rem;
     }
-    .section_union
-    {
+
+    .section_union {
         position: absolute;
         left: 0;
     }
-    .service
-    {
+
+    .service {
         position: relative;
-      
-        &__card
-        {
+
+        &__card {
+
             background: $light-color;
             padding: 5rem;
             @include box-shadow($white-shadow);
             @include border-radius(1rem);
-            margin-bottom: 1rem;
-            @include respond('991')
-            {
+            opacity: 0;
+            transform: translateY(100px) scale(0);
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            margin-top: 4rem;
+
+            &.active {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            @include respond('991') {
                 flex-direction: column;
-            } 
-            @include respond('768') 
-            {
+            }
+
+            @include respond('768') {
                 padding: 2.5rem;
             }
-            @include respond('480') 
-            {
+
+            @include respond('480') {
                 padding: 2rem;
             }
-            &-img 
-            {
+
+            &-img {
                 width: 40rem;
                 height: 35rem;
-                @include respond('991')
-                {
-                    width: 30rem;
-                    height: 40rem;
-                }
-                @include respond('768')
-                {
+
+                @include respond('991') {
                     width: 100%;
                     height: 40rem;
                 }
-                @include respond('520')
-                {
+
+                @include respond('768') {
+                    width: 100%;
+                    height: 40rem;
+                }
+
+                @include respond('520') {
                     height: 20rem;
                 }
-                img 
-                {
+
+                img {
                     width: 100%;
                     height: 100%;
                     @include border-radius(1rem);
                     border: 5px solid $light-color;
                     object-fit: cover;
-                
+
                 }
             }
-            &-content
-            {
+
+            &-content {
                 max-width: 700px;
                 padding: 1rem 4rem;
-                @include respond('768') 
-                {
+
+                @include respond('768') {
                     padding: 1rem 0;
                 }
-                @include respond('480') 
-                {
+
+                @include respond('480') {
                     padding: 1rem 0;
                 }
-                &-tagbtn 
-                {
+
+                &-tagbtn {
                     background: $offwhite-color;
                     padding: 1rem 2rem;
                     font-size: 1.4rem;
@@ -96,38 +104,36 @@
                     @include border-radius(5rem);
                 }
             }
-            &-heading 
-            {
-               h2 
-               {
-                font-size: 4.8rem;
-                font-weight: 600;
-                color: $text-dark;
-                margin: 2rem 0;
-                text-transform: capitalize;
-                letter-spacing: normal;
-                @include respond('991') 
-                {
-                    font-size: 3.5rem;
+
+            &-heading {
+                h2 {
+                    font-size: 4.8rem;
+                    font-weight: 600;
+                    color: $text-dark;
+                    margin: 2rem 0;
+                    text-transform: capitalize;
+                    letter-spacing: normal;
+
+                    @include respond('991') {
+                        font-size: 3.5rem;
+                    }
+
+                    @include respond('768') {
+                        font-size: 3rem;
+                    }
+
+                    @include respond('480') {
+                        font-size: 2rem;
+                    }
                 }
-                @include respond('768') 
-                {
-                    font-size: 3rem;
-                }
-                @include respond('480') 
-                {
-                    font-size: 2rem;
-                }
-               }
             }
-            &-desc
-            {
-               p 
-               {
-                font-size: 1.8rem;
-                font-weight: 400;
-               }
-            
+
+            &-desc {
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+
             }
         }
     }

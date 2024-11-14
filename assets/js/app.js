@@ -1,5 +1,35 @@
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Select all service cards
+  const serviceCards = document.querySelectorAll('.service__card');
+
+  // Observer options
+  const observerOptions = {
+    threshold: 0.3, // Trigger animation when 30% of the card is visible
+  };
+
+  // Callback function to handle the card visibility
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add 'active' class when the card is in view
+        entry.target.classList.add('active');
+      } else {
+        // Remove 'active' class when the card is out of view
+        entry.target.classList.remove('active');
+      }
+    });
+  };
+
+  // Create an IntersectionObserver instance
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  // Observe each service card
+  serviceCards.forEach((card) => {
+    observer.observe(card);
+  });
+});
 
 
 // ==========================
@@ -99,19 +129,30 @@ var mySwiper = new Swiper('.our__work', {
 // ==========================
 // GSAP SCROLL ANIMATION FOR SERVICE CARDS
 // ==========================
-// gsap.utils.toArray('.service__card').forEach((card, index) => {
-//   gsap.to(card, {
-//     y: -100 * index,
-//     scale: 0.5,
-//     opacity: 0,
-//     ease: "power2.out",
-//     scrollTrigger: {
-//       trigger: card,
-//       start: "top 80%",
-//       end: "top 20%",
-//       scrub: 1,
-//       toggleActions: "play none none reverse",
-//     }
+// document.addEventListener("DOMContentLoaded", function () {
+//   gsap.registerPlugin(ScrollTrigger);
+
+  // Target each service card
+  // const cards = document.querySelectorAll(".service__card");
+
+  // Loop through each card and apply the animation
+//   cards.forEach((card, index) => {
+//     gsap.fromTo(
+//       card,
+//       { y: 100, opacity: 0 },
+//       {
+//         y: 0,
+//         opacity: 1,
+//         duration: 1,
+//         ease: "power3.out",
+//         scrollTrigger: {
+//           trigger: card,
+//           start: "top 80%",
+//           end: "bottom 50%",
+//           scrub: true,
+//         },
+//       }
+//     );
 //   });
 // });
 
