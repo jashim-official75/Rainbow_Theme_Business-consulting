@@ -18,7 +18,6 @@
             padding: 5rem;
             @include box-shadow($white-shadow);
             @include border-radius(1rem);
-            margin: 1rem 0;
             &-img 
             {
                 width: 40rem;

@@ -19,21 +19,22 @@
 
     <title>Rainbow Themes | Business Consulting Html Template</title>
 
-    <!-- ==========REMIX ICON CSS LINK========== -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-
-    <!-- ==========SWIPER SLIDER CSS LINK========== -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- ==========SWIPER SLIDER CSS LINK========== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.css">
-    <!-- AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- ==========INTER GOOGLE FONT LINK========== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- ==========REMIX ICON CSS LINK========== -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- ==========SMOOTH SCROLL CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.css">
+    <!-- ==========AOS ANIMATION CSS LINK========== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" async />
+    <!-- ==========SWIPER SLIDER CSS LINK========== -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" async />
 
     <!-- ==========CUSTOM CSS LINK========== -->
     <link rel="stylesheet" href="dist/css/main.css">
@@ -127,7 +128,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
 
-                    <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
+                    <button class="nav__cta primary-button">Get a free quote</button>
                 </nav>
             </div>
 
@@ -141,66 +142,37 @@
         <!-- MOBILE HEADER PART END -->
         <!-- ===================================== -->
 
-        <header class="mobile_header flex align-items-center justy-space-between py-3">
+         <div class="mobile_header">
             <div class="logo">
                 <a href="index.html">
                     <img src="assets/images/logo.svg" alt="">
                 </a>
             </div>
-          <div class="menu-icon">
-            <a href="#" class="menu-icon"><i class="ri-menu-line"></i></a>
-          </div>
-        </header>
-
-        <div class="mobile_sidbar">
-            <div class="menu__close-btn">
-                <i class="ri-close-large-line"></i>
+            <div class="menu-icon" onclick="openSidebar()">
+             <i class="ri-menu-line"></i>
             </div>
-            <div class="mobile_header__logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="">
-                </a>
-            </div>
-            <div class="mobile__menu">
-                <ul>
-                    <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                    <li><a href="#about-us">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <hr>
-            <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
-            <div class="separator"></div>
-            <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i
-                        class="ri-discuss-line"></i>
-                    support@gmail.com</a> </p>
-            <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
-            <hr>
             
+        </div> 
 
-        </div>
+       
+        <div class="overlay" onclick="closeSidebar()"></div>
 
         <!-- ===================================== -->
         <!-- MOBILE HEADER PART END -->
         <!-- ===================================== -->
 
-
-
         <!-- ===================================== -->
         <!-- HERO PART START -->
         <!-- ===================================== -->
         <main id="hero" class="hero_area">
-            <div class="hero__shape--left" data-aos="fade-left">
+            <div class="hero__shape--left fadeleft">
                 <img src="assets/images/hero-left-shape.webp" alt="">
             </div>
 
             <div class="container">
 
                 <section class="hero">
-                    <div class="cube_box rotate">
+                    <div class="cube_box dancer">
                         <img src="assets/images/3d-cube.webp" alt="">
                     </div>
                     <h1 class="hero__title">We shape the future <span class="heading_shape"><img
@@ -235,11 +207,11 @@
                     </div>
 
                 </section>
-                <div class="hero__img" data-aos="fade-down">
+                <div class="hero__img">
                     <div class="hero__img-circle">
                         <button class="hero__img-playbutton" id="playButton"><i
                                 class="ri-play-large-fill ri-4x"></i></button>
-                        <img src="assets/images/text-circle.svg" alt="">
+                        <img src="assets/images/text-circle.svg" alt="" class="circle">
                     </div>
                     <img src="assets/images/Banner Img.png" alt="">
                 </div>
@@ -260,17 +232,20 @@
         <div class="marquee__container">
 
             <div class="marquee__container-content">
-                <span> <img src="assets/images/star.svg" alt=""> CREATIVE <img src="assets/images/star.svg" alt="">
-                    SOLUTIONS <img src="assets/images/badge.svg" alt=""> EXPERT GUIDANCE <img
+                <span> <img src="assets/images/star.svg" class="rotate" alt=""> CREATIVE <img
+                        src="assets/images/star.svg" class="rotate" alt="">
+                    SOLUTIONS <img src="assets/images/badge.svg" class="rotate" alt=""> EXPERT GUIDANCE <img
                         src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt="">
                     CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg"
                         alt=""> EXPERT GUIDANCE <img src="assets/images/badge.svg" alt="">
                     CONSULTING ✦ </span>
+
             </div>
             <div class="marque__line">
 
             </div>
         </div>
+
         <!-- ===================================== -->
         <!-- HERO PART END -->
         <!-- ===================================== -->
@@ -295,7 +270,7 @@
                             </div>
                             <div class="about__circle">
                                 <div class="about_circle">
-                                    <img src="assets/images/about-circle.webp" alt="" class="circle_img">
+                                    <img src="assets/images/about-circle.webp" alt="" class="circle_img circle">
                                     <div class="circle-logo">
                                         <img src="assets/images/shape.png" alt="">
                                     </div>
@@ -382,7 +357,7 @@
         <!-- SETVICES  PART START -->
         <!-- ===================================== -->
         <section id="services" class="services__area">
-            <div class="section_union">
+            <div class="section_union fadeleft">
                 <img src="assets/images/union-left.webp" alt="">
             </div>
 
@@ -484,99 +459,155 @@
         <!-- ===================================== -->
 
 
+
         <!-- ===================================== -->
         <!-- OUR WORK  PART START -->
         <!-- ===================================== -->
         <section id="our-work" class="our-work-area">
-            <div class="container">
+            <div class="container work__area">
                 <div class="our_wrorkshowcase">
                     <img src="assets/images/work-showcase.svg" alt="">
                 </div>
-                <div class="work__title">
-                    <h4>Recent</h4>
-                    <h4>Work</h4>
+
+                <div class="large__title">
+
+                    <div class="work__title">
+                        <h4>Recent</h4>
+                        <h4>Works</h4>
+                    </div>
+
+                    <div class="subheading">
+                        <p>Ready to transform your hard work into <br> a thriving, stress-free business?</p>
+                    </div>
                 </div>
+
+                <div class="work__arrow">
+
+                    <div class="swiper-button-next" style="left: -5rem;">
+                        <i class="ri-arrow-left-line icon-gradient"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+
+                        <i class="ri-arrow-right-line icon-gradient"></i>
+                    </div>
+                </div>
+
             </div>
             <div class="our__work">
 
                 <div class="swiper-wrapper our__work--wrapper">
 
-                    <div class="swiper-slide">
-                        <div class="our__work--wrapper--card">
-                            <div class="our__work--wrapper--card--img">
-                                <img src="assets/images/work-one.webp" alt="">
+
+                    <div class="swiper-slide our__work--wrapper--card">
+
+                        <div class="our__work--wrapper--card--img">
+                            <img src="assets/images/about-img-one.webp" alt="">
+                        </div>
+                        <div class="our__work--wrapper--card--content">
+                            <div class="our__work--wrapper--card--content-btn">
+                                <button class="gradient-btn"><span>2024, Business</span></button>
                             </div>
-                            <div class="our__work--wrapper--card--content">
-                                <div class="our__work--wrapper--card--content-btn">
-                                    <button class="gradient-btn"><span>2024, Business</span></button>
-                                </div>
-                                <div class="our__work--wrapper--card--content-heading">
-                                    <h3>Business Consulting Service</h3>
-                                    <div class="content__cta-btn">
-                                        <button class="gradient-btn--circle">
+                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                                <h3>Business Consulting Service</h3>
+                                <div class="content__cta-btn">
+                                    <a href="#">
+                                        <button class="gradient-btn gradient-btn--circle">
                                             <img src="assets/images/up-arrow.svg" alt="">
                                         </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/about-img-one.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <button class="gradient-btn--circle">
-                                        <img src="assets/images/up-arrow.svg" alt="">
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
+
                     <div class="swiper-slide our__work--wrapper--card">
 
                         <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/about-img-one.webp" alt="">
+                            <img src="assets/images/about-img-two.webp" alt="">
                         </div>
                         <div class="our__work--wrapper--card--content">
                             <div class="our__work--wrapper--card--content-btn">
                                 <button class="gradient-btn"><span>2024, Business</span></button>
                             </div>
-                            <div class="our__work--wrapper--card--content-heading">
+                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
                                 <h3>Business Consulting Service</h3>
                                 <div class="content__cta-btn">
-                                    <button class="gradient-btn--circle">
-                                        <img src="assets/images/up-arrow.svg" alt="">
-                                    </button>
+                                    <a href="#">
+                                        <button class="gradient-btn gradient-btn--circle">
+                                            <img src="assets/images/up-arrow.svg" alt="">
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
+
                     <div class="swiper-slide our__work--wrapper--card">
 
                         <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/about-img-one.webp" alt="">
+                            <img src="assets/images/service-four.webp" alt="">
                         </div>
                         <div class="our__work--wrapper--card--content">
                             <div class="our__work--wrapper--card--content-btn">
                                 <button class="gradient-btn"><span>2024, Business</span></button>
                             </div>
-                            <div class="our__work--wrapper--card--content-heading">
+                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
                                 <h3>Business Consulting Service</h3>
                                 <div class="content__cta-btn">
-                                    <button class="gradient-btn--circle">
-                                        <img src="assets/images/up-arrow.svg" alt="">
-                                    </button>
+                                    <a href="#">
+                                        <button class="gradient-btn gradient-btn--circle">
+                                            <img src="assets/images/up-arrow.svg" alt="">
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide our__work--wrapper--card">
+
+                        <div class="our__work--wrapper--card--img">
+                            <img src="assets/images/service-three.webp" alt="">
+                        </div>
+                        <div class="our__work--wrapper--card--content">
+                            <div class="our__work--wrapper--card--content-btn">
+                                <button class="gradient-btn"><span>2024, Business</span></button>
+                            </div>
+                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                                <h3>Business Consulting Service</h3>
+                                <div class="content__cta-btn">
+                                    <a href="#">
+                                        <button class="gradient-btn gradient-btn--circle">
+                                            <img src="assets/images/up-arrow.svg" alt="">
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide our__work--wrapper--card">
+
+                        <div class="our__work--wrapper--card--img">
+                            <img src="assets/images/service-one.webp" alt="">
+                        </div>
+                        <div class="our__work--wrapper--card--content">
+                            <div class="our__work--wrapper--card--content-btn">
+                                <button class="gradient-btn"><span>2024, Business</span></button>
+                            </div>
+                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                                <h3>Business Consulting Service</h3>
+                                <div class="content__cta-btn">
+                                    <a href="#">
+                                        <button class="gradient-btn gradient-btn--circle">
+                                            <img src="assets/images/up-arrow.svg" alt="">
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -586,13 +617,8 @@
 
 
                 </div>
-            
-                <div class="swiper-button-next">
-                    <i class="ri-arrow-right-line icon-gradient"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="ri-arrow-left-line icon-gradient"></i>
-                </div>
+
+
             </div>
         </section>
         <!-- ===================================== -->
@@ -611,7 +637,7 @@
                     <div class="slider-row">
                         <div class="testimonial-swiper slider-custom-image">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide" data-bullet-thumb="assets/images/user-one.webp">
+                                <div class="swiper-slide">
                                     <div class="testimonial-wrap">
                                         <div class="testimonial-wrap--inner">
 
@@ -631,7 +657,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide" data-bullet-thumb="assets/images/user-two.webp">
+                                <div class="swiper-slide">
                                     <div class="testimonial-wrap">
                                         <div class="testimonial-wrap--inner">
 
@@ -651,7 +677,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide" data-bullet-thumb="assets/images/user-three.webp">
+                                <div class="swiper-slide">
 
                                     <div class="testimonial-wrap">
 
@@ -674,12 +700,17 @@
                                 </div>
                             </div>
                             <div class="swiper-pagination slider-custom-image-pagination"></div>
-                            <div class="swiper-button-next">
-                                <i class="ri-arrow-right-line icon-gradient"></i>
+                            
+                            <div class="testomonail__arrow">
+                                <div class="swiper-button-next">
+                                    <i class="ri-arrow-right-line icon-gradient"></i>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <i class="ri-arrow-left-line icon-gradient"></i>
+                                </div>
                             </div>
-                            <div class="swiper-button-prev">
-                                <i class="ri-arrow-left-line icon-gradient"></i>
-                            </div>
+                         
+
                         </div>
                     </div>
                     <div class="gradient_circle"></div>
@@ -696,11 +727,11 @@
         <!-- FOOTER PART START -->
         <!-- ===================================== -->
         <footer id="footer" class="footer_area">
-            <div class="circle-icon">
+            <div class="circle__icon circle__icon--left dancer">
                 <img src="assets/images/circle-3d.webp" alt="">
             </div>
             <div class="container">
-                <div class="footer flex flex-wrap g-10">
+                <div class="footer flex flex-wrap g-20">
                     <div class="footer__single w-33">
                         <div class="footer__single-logo">
                             <a href="#">
@@ -725,7 +756,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="footer__single w-66 flex ">
+                    <div class="footer__single  flex flex-wrap flex-1">
                         <div class="footer__single-column w-33">
                             <div class="footer__single-column-title">
                                 <h2>Quick Link</h2>
@@ -772,7 +803,7 @@
                                         <img src="assets/images/consult-two.webp" alt="">
                                     </div>
                                     <div class="footer__single-column-event_info">
-                                        <h3 class="underline">Email Marketing</h3>
+                                        <h3>Email Marketing</h3>
                                         <span>29 September, CA</span>
                                     </div>
                                 </div>
@@ -793,29 +824,30 @@
                     </div>
                 </div>
                 <div class="footer__newsletter">
-                    <div class="footer__newsletter-inner">
-                        <div class="newsletter">
-                            <div class="bell_icon">
+                    <div class="footer__newsletter-inner grid grid-2 align-items-center flex-wrap">
+                        <div class="newsletter flex g-20 align-items-center ">
+                            <div class="newsletter__bellicon">
                                 <img src="assets/images/bell-icon.webp" alt="">
                             </div>
-                            <div class="content">
-                                <h3>keep up to date -
+                            <div class="newsletter__content">
+                                <h3>keep up to date - <br>
                                     get updates with latest topics</h3>
                             </div>
                         </div>
-                        <div class="newsInputbox">
-                            <input type="email" name="email" id="email" placeholder="Enter your email...">
+                        <div class="newsletter__inputbox flex">
+                            <input type="email" name="email" id="email" autocomplete="off" class="flex-1"
+                                placeholder="Enter your email...">
                             <button class="primary-button subscribe-btn">Subscribe</button>
                         </div>
                     </div>
                 </div>
-                <div class="footer__bottom">
+                <div class="footer__bottom flex justify-space-between align-items-center w-100">
                     <div class="copyright_text">
                         <span>&copy; 2024 <a href="https://themeforest.net/user/rainbow-themes/portfolio"
-                                target="_blank">Rainbow Themes</a></span>
+                                target="_blank" class="highlight__text">Rainbow Themes</a>. All Rights Reserved.</span>
                     </div>
                     <div class="footer_links">
-                        <ul>
+                        <ul class="flex g-10 align-items-center">
                             <li><a href="#">Terms & Condition</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Support</a></li>
@@ -823,93 +855,169 @@
                     </div>
                 </div>
             </div>
-            <div class="circle-icon">
+            <div class="circle__icon circle__icon--bottom dancer">
                 <img src="assets/images/circle-3d.webp" alt="" width="100">
             </div>
+
         </footer>
         <!-- ===================================== -->
         <!-- FOOTER PART END -->
         <!-- ===================================== -->
+
+
+    </div>
+
+
+    <!-- SCRIPT HERE -->
+
+    <!-- ==========JQUREY CDN JS ========== -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- ==========SWIPER SLIDER JS ========== -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- ==========SMOOTH SCROLL JS ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.js"></script>
+
+    <!-- ==========GSAP ANIMATION JS ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- ==========GSAP SCROLLTRIGGER PLUGIN ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- ==========AOS ANIMATION JS ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- ==========CUSTOM JS ========== -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- ==========LAZYLOAD JS ========== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+
+    <script>
+const menuIcon = document.querySelector(".menu-icon");
+const sideBar = document.querySelector(".mobile_sidebar");
+
+menuIcon.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+  console.log("Hellow");
+});
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const menuIcon = document.querySelector('.menu-icon');
+//   const sidebar = document.querySelector('.mobile_sidebar');
+//   const overlay = document.querySelector('.overlay');
+//   const closeButton = document.querySelector('.menu__close-btn');
+
+//   function openSidebar() {
+//       sidebar.classList.add('active');
+//       overlay.style.display = 'block';
+//       document.body.style.overflow = 'hidden';
+//       console.log("sidebarOpen");
+//   }
+
+//   function closeSidebar() {
+//       sidebar.classList.remove('active');
+//       overlay.style.display = 'none';
+//       document.body.style.overflow = 'auto';
+
+//   }
+
+//   menuIcon.addEventListener('click', openSidebar);
+//   closeButton.addEventListener('click', closeSidebar);
+//   overlay.addEventListener('click', closeSidebar);
+// });
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const options = {
+                damping: 0.1,
+                renderByPixel: true,
+                alwaysShowTracks: true
+            };
+            Scrollbar.init(document.querySelector('#scroll-container'), options);
+        });
+
+
+ 
+
+        var tl = gsap.timeline()
+
+        tl.from(".header__logo", {
+            y: -30,
+            duration: 1,
+            opacity: 0,
+            ease: "power2.out",
+        }, "0")
+
+        tl.from(".hero__title , .about__info-text h2", {
+            y: 30,
+            duration: 1,
+            ease: "power2.out",
+            opacity: 0,
+            delay: 0.2,
+        }, 0);
+
+
+        tl.from(".nav__menu li , .primary-btn", {
+            y: -30,
+            duration: 1,
+            ease: "power2.out",
+            stagger: 0.15,
+            opacity: 0,
+            delay: 0.2,
+        })
+
+
+
+        gsap.to(".circle", {
+            rotation: 360,
+            repeat: -1,
+            ease: "linear",
+            duration: 10,
+        })
+
+        gsap.to(".dancer", {
+            y: -50,
+            rotation: 20,
+            duration: 3,
+            yoyo: true,
+            repeat: -1,
+            ease: "power1.inOut",
+        });
+
+        gsap.from(".fadein", {
+            x: 20,
+            opacity: 0,
+            duration: 2,
+
+        })
+        gsap.from(".fadeleft", {
+            x: -100,
+            opacity: 0,
+            duration: 2,
+
+        })
+
+
+        const waveHeading = document.querySelector(".hero__description");
+        waveHeading.innerHTML = waveHeading.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        // Animate each letter
+        gsap.fromTo(".letter", {
+            y: 50,
+            opacity: 0
+        }, {
+            y: 0,
+            opacity: 1,
+            stagger: 0.05,
+            ease: "back.out(1)",
+            duration: 0.5
+        });
+    </script>
+
 </body>
-
-<!-- SCRIPT HERE -->
-
-<!-- Swiper JS -->
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Include Waypoints Plugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-
-<!-- Include Counter Up Plugin -->
-<script src="https://cdn.rawgit.com/bfintal/Counter-Up/master/dist/jquery.counterup.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<!-- AOS JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="assets/js/app.js"></script>
-
-
-
-
-</div>
-<script>
-   
-    document.addEventListener('DOMContentLoaded', function () {
-        const options = {
-            damping: 0.1,
-            renderByPixel: true,
-            alwaysShowTracks: true
-        };
-        Scrollbar.init(document.querySelector('#scroll-container'), options);
-    });
-
-
-    var tl = gsap.timeline()
-
-    tl.from(".header__logo", {
-        y: -30,
-        duration: 1,
-        ease: "power2.out",
-    })
-
-    tl.from(".nav__menu li", {
-        y: -30,
-        duration: 1,
-        ease: "power2.out",
-        stagger: 0.15,
-        opacity: 0,
-        delay: 0.2,
-    })
-
-    gsap.from(".hero__title", {
-        y: 30,
-        duration: 1,
-        ease: "power2.out",
-        opacity: 0,
-        delay: 0.2,
-    });
-
-  
-
-
-    const waveHeading = document.querySelector(".hero__description");
-    waveHeading.innerHTML = waveHeading.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-    // Animate each letter
-    gsap.fromTo(".letter", {
-        y: 50,
-        opacity: 0
-    }, {
-        y: 0,
-        opacity: 1,
-        stagger: 0.05,
-        ease: "back.out(1)",
-        duration: 0.5
-    });
-</script>
-
 
 </html>

@@ -13,6 +13,21 @@ $dark-color:#000;
 $yellow-color:#FFA722;
 
 // ==========================
+// DEViCE Breakpoints
+// ==========================
+
+$breakpoint-420: 420px;
+$breakpoint-480: 480px;
+$breakpoint-520: 520px;
+$breakpoint-768: 768px;
+$breakpoint-991: 991px;
+$breakpoint-1280: 1280px;
+$breakpoint-1366: 1366px;
+$breakpoint-1440: 1440px;
+$breakpoint-1556: 1556px;
+
+
+// ==========================
 // Gradient Variables
 // ==========================
 
@@ -24,6 +39,7 @@ $text-graident: linear-gradient(130.68deg, rgba(81, 99, 255, 0.08) 27.01%, rgba(
 $border-gradient: linear-gradient(180deg, rgba(15, 52, 248, 0.47) 0%, rgba(9, 31, 146, 0) 100%);
 $btn-gradient: linear-gradient(102.44deg, #5163FF -0.32%, #FE71B9 100%);
 $dark-footer-gradient:linear-gradient(145.12deg, rgba(254, 113, 185, 0.04) -2.12%, rgba(20, 2, 73, 0.01) 121.13%);
+$input-gradient: linear-gradient(153.11deg, rgba(255, 255, 255, 0.45) -3.36%, rgba(254, 113, 185, 0) 149.26%);
 
 // ==========================
 // Alpha Colors Variables
@@ -63,6 +79,10 @@ $dark-shadow: 0px 8px 15.7px 0px #0C044212;
 $dark-shadow-1: 0px 8px 18.1px 0px #070F552E;
 $dark-shadow-2: 20px 15px 36px 0px rgba(0, 35, 75, 0.15);
 $white-shadow: 0px 33px 101.1px 0px #EEEFFF inset, 0px -23px 25.3px 0px #F6F7FF inset;
+$footer-shadow: 2.25px -7px 43.7px 0px rgba(255, 255, 255, 0.02) inset , 0px 20px 122px 0px rgba(19, 7, 150, 0.08) inset;
+
+
+
 
 
 

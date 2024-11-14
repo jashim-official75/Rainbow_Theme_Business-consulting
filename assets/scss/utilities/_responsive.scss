@@ -1,14 +1,38 @@
-// ┌────────────┐
-// │ Respond-To │
-// └────────────┘
-
-@mixin respond-to($max: null, $min: null, $type: screen) {
-  @if $max and $min {
-    @media #{$type} and (max-width: $max) and (min-width: $min) {
+@mixin respond($breakpoint) {
+  @if $breakpoint == '420' {
+    @media (max-width: #{$breakpoint-420}) {
       @content;
     }
-  } @else {
-    @media #{$type} and (max-width: $max) {
+  } @else if $breakpoint == '480' {
+    @media (max-width: #{$breakpoint-480}) {
+      @content;
+    }
+  } @else if $breakpoint == '520' {
+    @media (max-width: #{$breakpoint-520}) {
+      @content;
+    }
+  } @else if $breakpoint == '768' {
+    @media (max-width: #{$breakpoint-768}) {
+      @content;
+    }
+  } @else if $breakpoint == '991' {
+    @media (max-width: #{$breakpoint-991}) {
+      @content;
+    }
+  } @else if $breakpoint == '1280' {
+    @media (max-width: #{$breakpoint-1280}) {
+      @content;
+    }
+  } @else if $breakpoint == '1366' {
+    @media (max-width: #{$breakpoint-1366}) {
+      @content;
+    }
+  } @else if $breakpoint == '1440' {
+    @media (max-width: #{$breakpoint-1440}) {
+      @content;
+    }
+  } @else if $breakpoint == '1556' {
+    @media (max-width: #{$breakpoint-1556}) {
       @content;
     }
   }

@@ -1,15 +1,24 @@
-// ┌───────────┐
-// │ Transform │
-// └───────────┘
+
+@mixin prefixer($property, $value, $prefixes...) {
+  @each $prefix in $prefixes {
+    @if $prefix == spec {
+      #{$property}: #{$value}; 
+    } @else {
+      -#{$prefix}-#{$property}: #{$value}; 
+    }
+  }
+}
 
 @mixin transform($property: none) {
-  @include prefixer(transform, $property, webkit moz ms o spec);
+  @include prefixer(transform, $property, webkit, moz, ms, o, spec);
 }
+
 
 @mixin transform-origin($axes: 50%) {
-  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+  @include prefixer(transform-origin, $axes, webkit, moz, ms, o, spec);
 }
 
-@mixin transform-style ($style: flat) {
-  @include prefixer(transform-style, $style, webkit moz ms o spec);
+
+@mixin transform-style($style: flat) {
+  @include prefixer(transform-style, $style, webkit, moz, ms, o, spec);
 }

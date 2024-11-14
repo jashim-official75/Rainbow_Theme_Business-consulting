@@ -3,34 +3,89 @@
 @import "../utilities/transition";
 
 
-.our-work-area
-{
+.our-work-area {
     position: relative;
-    .our__work
+    padding-bottom: 0;
+    .swiper-slide-active {
+        .our__work--wrapper--card--content {
+            bottom: 0;
+        }
+    }
+   .subheading 
+   {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    p 
     {
-        &--wrapper
-        {
-            &--card
-            {
+        font-size: 1.8rem;
+        font-weight: 400;
+        max-width: 400px;
+    }
+   }
+    .our__work {
+        position: relative;
+        top: -15rem;
+        overflow: hidden;
+        &--wrapper {
+            &--card {
                 position: relative;
                 width: 200px;
-                height: 500px;
+                height: 600px;
                 border: 0.4rem solid $light-color;
                 @include box-shadow($dark-shadow-2);
                 overflow: hidden;
-                img 
+              
+                &--img 
                 {
-                    width: 100%;
-                    height: 100%;
-                    @include border-radius(0.8rem);
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        @include border-radius(0.8rem);
+                        object-fit: cover;
+                        object-position: top;
+                    }
                 }
-                &--content
-                {
+              
+
+                &--content {
                     position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    bottom: -20rem;
+                    width: 100%;
+                    padding: 3rem;
+                    @include transition(all 0.3s ease-in-out);
+
+                    &-heading {
+                        background: $light-color;
+                        padding: 1rem 2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        @include border-radius(1rem);
+
+                        h3 {
+                            font-size: 2.4rem;
+                            font-weight: 600;
+                            color: $text-dark;
+                            margin-bottom: 0;
+                        }
+                    }
                 }
             }
         }
+
+      
     }
+}
+
+
+.work__arrow {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-30%) scale(1.2);
+    right: 17%;
+   
 }

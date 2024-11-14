@@ -1,7 +1,9 @@
-
 @import "../utilities//border-radius";
 @import "../utilities/box-shadow";
 @import "../utilities/transition";
+@import "../utilities/transform";
+
+// primary button
 
 .primary-button {
   position: relative;
@@ -10,18 +12,24 @@
   font-size: 1.6rem;
   font-weight: 600;
   border: none;
- @include border-radius(1rem);
+  @include border-radius(1rem);
   color: $light-color;
   cursor: pointer;
   text-align: center;
   background: $theme-color;
-@include transition( all 0.3s ease);
-@include box-shadow($glow-shadow);
-text-shadow: $text-shadow;
-&:hover 
-{
-  background: $primary-color;
-}
+  @include transition(all 0.3s ease);
+  @include box-shadow($glow-shadow);
+  text-shadow: $text-shadow;
+
+  @include respond('768') {
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  &:hover {
+    background: $primary-color;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -31,41 +39,54 @@ text-shadow: $text-shadow;
     height: 100%;
     background: $light-gradient;
   }
-  &:hover::after
-  {
+
+  &:hover::after {
     transform: scale(1.1);
   }
+
   &:focus {
     outline: none;
     @include box-shadow($shadow);
 
   }
-  &__hero-btn 
-  {
+
+  &__hero-btn {
     padding: 1.8rem 4rem;
     font-size: 2rem;
   }
 }
+
+// glow button
+
 .glow-button {
   background: $gradient-1;
   @include box-shadow($glassmorphism-shadow);
   padding: 1.3rem 2.5rem;
   color: $light-color;
   font-size: 1.6rem;
+
+  @include respond('768') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
   @include border-radius(5rem);
   letter-spacing: normal;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
   position: relative;
-  img 
-  {
+
+  img {
     position: relative;
     z-index: 10;
     transition: transform 0.5s ease-in-out;
   }
+
   span {
     position: relative;
-    z-index: 2; 
+    z-index: 2;
     transition: transform 0.5s ease-in-out;
   }
 
@@ -88,61 +109,96 @@ text-shadow: $text-shadow;
   }
 
   &:hover span {
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
   }
-  &:hover img 
-  {
+
+  &:hover img {
     transform: rotate(40deg);
   }
 }
 
+// border button
 
-.border-btn 
-{
+.border-btn {
   position: relative;
-padding: 1.8rem 3rem;
-font-size: 1.8rem;
-font-weight: 600;
-@include border-radius(1rem);
-margin-top: 2rem;
-border: none;
-background: $light-color;
-border: 2px solid $border-color-alpha;
-overflow: hidden;
-cursor: pointer;
-span 
-{
-  position: relative;
-  z-index: 10;
-  color: $text-color;
-}
-&:hover span
-{
-  color: $light-color;
-}
-&:hover::after
-{
-  transform: scale(1);
-  transform: translateX(0%);
-}
-&::after
-{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $gradient-1;
-  width: 100%;
-  height: 100%;
-  transform: translateX(-110%);
-  @include transition(all .3s ease-in-out);
-}
+  padding: 1.8rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  @include border-radius(1rem);
+  margin-top: 2rem;
+  border: none;
+  background: $light-color;
+  border: 2px solid $border-color-alpha;
+  overflow: hidden;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    z-index: 10;
+    color: $text-color;
+  }
+
+  &:hover span {
+    color: $light-color;
+  }
+
+  &:hover::after {
+    transform: scale(1);
+    transform: translateX(0%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $gradient-1;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-110%);
+    @include transition(all .3s ease-in-out);
+  }
 }
 
-.gradient-btn 
-{
+// gradient button
+
+.gradient-btn {
   position: relative;
   background: $btn-gradient;
+
   padding: 1rem 2rem;
   @include border-radius(0.4rem);
+  font-size: 1.5rem;
+  color: $light-color;
+  border: none;
+  margin-bottom: 1rem;
+  @include transition(all 0.5s ease);
+
+  &:hover {
+    background: $gradient-1;
+  }
+
+  &--circle {
+    width: 5rem;
+    height: 5rem;
+    @include border-radius(1rem);
+    margin-bottom: 0;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transition(all 0.5s ease);
+      width: 2rem !important;
+      height: 2rem !important;
+      @include transform(translate(-50%, -50%));
+    }
+
+    &:hover {
+      img {
+        @include transform(translate(-50%, -50%) rotate(45deg));
+      }
+    }
+
+  }
 }

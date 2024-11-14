@@ -1,11 +1,16 @@
 @import "../utilities//border-radius";
 @import "../utilities/box-shadow";
 @import "../utilities/transition";
+@import "../utilities/responsive";
 
 .header
 {
     position: relative;
     top: 2rem;
+    @include respond('768')
+       {
+        display: none;
+       }
     &__top-bar 
     {
        background: $offwhite-color;

@@ -1,63 +1,3 @@
-// @import '../utilities/animation';
-// @import '../utilities/transform';
-
-// .rotate
-// {
-//     @include animation(rotate 1s linear infinite);
-// }
-
-// @include keyframes(pop)
-// {
-//     0%{
-//         @include transform(scale(1));
-//     }
-//     50% {
-//         @include transform(scale(1.1));
-//     }
-
-//     100% {
-//         @include transform(scale(1));
-//     }
-// }
-
-
-// .pop
-// {
-//     @include animation(pop 0.2s  linear forwards);
-// }
-
-// @include keyframes(pop)
-// {
-//     0%{
-//         @include transform(scale(1));
-//     }
-//     50% {
-//         @include transform(scale(1.1));
-//     }
-
-//     100% {
-//         @include transform(scale(1));
-//     }
-// }
-
-
-// .glow 
-// {
-//     @include animation(glow 1500ms ease-out infinite);
-// }
-// @include keyframes(glow)
-// {
-//     0%,20% {
-//         @include transform(scale(1));
-//         opacity: 1;
-//       }
-//       100% {
-//         @include transform(scale(2.5));
-//         opacity: 0;
-//       }
-// }
-
-
 
 .marquee__container {
     position: relative;
@@ -71,6 +11,7 @@
         bottom: -1rem;
         z-index: -10 !important;
         opacity: 0.5;
+        background: $gradient-1;
         &::after {
             content: "";
             position: absolute;
@@ -94,8 +35,6 @@
         }
     }
 
-
-
     &-content {
         display: inline-block;
         align-items: center;
@@ -108,11 +47,34 @@
         span 
         {
             display: flex;
+            align-items: center;
             gap: 2rem;
             img 
             {
                 width: 5rem;
             }
         }
+    }
+}
+
+.circle__icon 
+{
+    position: relative;
+    filter: blur(2rem);
+    position: absolute;
+    @include respond('768')
+    {
+        opacity: 0.5;
+    }
+    &--left
+    {
+        top: 25%;
+        left: -5%;
+    }
+    &--bottom
+    {
+        bottom: 5%;
+        right: 10%;
+        filter: blur(1rem);
     }
 }

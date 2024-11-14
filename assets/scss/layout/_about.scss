@@ -18,11 +18,18 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-
+                @include respond('768')
+                {
+                    margin-bottom: 2rem;
+                }
                 .about_one {
                     width: 280px;
                     border-radius: 15px;
                     border: 3px solid $light-color;
+                    @include respond('768')
+                    {
+                        width: 50%;
+                    }
                 }
 
             }
@@ -35,6 +42,14 @@
                 height: 350px;
                 border: 0.6rem solid $light-color;
                 @include border-radius(1rem);
+
+                @include respond('768')
+                {
+                    width: 50%;
+                    left: 50%;
+                    bottom: 0;
+                }
+                
                 overflow: hidden;
 
                 .about_two {
@@ -53,11 +68,22 @@
             @include border-radius(50%);
             @extend .flex-center;
             position: absolute;
-            top: 1rem;
+            top: 0;
             right: 28%;
 
+            @include respond('1280')
+            {
+                right: 23%;
+            }
+
+            @include respond('768')
+            {
+                right: 16%;
+                top: 0;
+            }
+
             .circle_img {
-                width: 95%;
+                width: 100%;
             }
 
             .circle-logo {
@@ -91,10 +117,18 @@
                     color: $text-dark;
                     font-weight: 600;
                     line-height: 1.2;
+                    @include respond('768')
+                    {
+                        text-align: center;
+                    }
                 }
                 p 
                 {
                     font-size: 1.8rem;
+                    @include respond('768')
+                    {
+                        text-align: center;
+                    }
                 }
                 ul 
                 {
@@ -107,6 +141,15 @@
                         color: $text-color;
                         margin: 3rem 0;
                         left: 5rem;
+                        @include respond('768')
+                        {
+                
+                                font-size: 1.3rem;
+                                margin: 2rem 0;
+                                left: 38px;
+                                max-width: 90%;
+                            }
+                        }
                       .circle_dot {
                             position: absolute;
                             left: -4rem;
@@ -215,8 +258,8 @@
                 {
                     text-align: center;
                     font-size: 1.6rem;
+                    color: $text-color;
                 }
             }
         }
     }
-}
