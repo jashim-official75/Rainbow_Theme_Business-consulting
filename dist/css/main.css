@@ -109,6 +109,7 @@
   background: linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
   padding: 10px 0;
   z-index: 100;
+  overflow: hidden;
 }
 .marquee__container .marque__line {
   position: relative;
@@ -205,7 +206,7 @@
 }
 @media (max-width: 768px) {
   .primary-button {
-    padding: 0.8rem 2rem;
+    padding: 1.4rem 2rem;
     font-size: 1.4rem;
   }
 }
@@ -1148,8 +1149,17 @@ section {
 }
 
 @media (max-width: 1200px) {
-  .grid-3, .grid-4, .grid-5 {
+  .grid-3, .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-5 {
+    grid-template-columns: repeat(3, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (max-width: 768px) {
@@ -1162,10 +1172,16 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .grid-5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 576px) {
   .container {
     padding: 0 10px;
+  }
+  .grid-5 {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .marquee__container {
@@ -1175,6 +1191,7 @@ section {
   background: linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
   padding: 10px 0;
   z-index: 100;
+  overflow: hidden;
 }
 .marquee__container .marque__line {
   position: relative;
@@ -1430,6 +1447,11 @@ section {
     width: 70%;
   }
 }
+@media (max-width: 1280px) {
+  .hero_area .hero__img {
+    width: 65%;
+  }
+}
 @media (max-width: 768px) {
   .hero_area .hero__img {
     display: none;
@@ -1454,6 +1476,11 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media (max-width: 1280px) {
+  .hero_area .hero__img-circle {
+    top: -9.5rem;
+  }
 }
 .hero_area .hero__img-circle img {
   width: 80%;
@@ -1514,6 +1541,22 @@ section {
 }
 .hero_area .hero__social-proof {
   position: relative;
+}
+@media (max-width: 768px) {
+  .hero_area .hero__social-proof {
+    padding: 2rem 0;
+  }
+}
+@media (max-width: 520px) {
+  .hero_area .hero__social-proof {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .hero_area .hero__social-proof::after {
   content: "";
@@ -1589,6 +1632,8 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
+    margin: 1rem 0;
   }
 }
 
@@ -1757,7 +1802,15 @@ section {
   box-shadow: 0px 8px 15.7px 0px rgba(12, 4, 66, 0.0705882353);
   border-radius: 50%;
 }
-.about_area__cta-ceo-intro .ceo-img {
+@media (max-width: 768px) {
+  .about_area .about__cta {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.about_area .about__cta-ceo-intro .ceo-img {
   position: relative;
   width: 6rem;
   height: 6rem;
@@ -1765,14 +1818,14 @@ section {
   -webkit-box-shadow: 0px 8px 18.1px 0px rgba(7, 15, 85, 0.1803921569);
   box-shadow: 0px 8px 18.1px 0px rgba(7, 15, 85, 0.1803921569);
 }
-.about_area__cta-ceo-intro .ceo-img img {
+.about_area .about__cta-ceo-intro .ceo-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-.about_area__cta-ceo-intro .ceo-img::after {
+.about_area .about__cta-ceo-intro .ceo-img::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1786,22 +1839,22 @@ section {
           transform: scale(1.1);
   border-radius: 50%;
 }
-.about_area__cta-ceo-intro .ceo-title {
+.about_area .about__cta-ceo-intro .ceo-title {
   position: relative;
   top: 1rem;
 }
-.about_area__cta-ceo-intro .ceo-title img {
+.about_area .about__cta-ceo-intro .ceo-title img {
   width: 100px;
   margin: 0 auto;
   display: block;
 }
-.about_area__cta-ceo-intro .ceo-title .hr {
+.about_area .about__cta-ceo-intro .ceo-title .hr {
   width: 100%;
   height: 1px;
   background: rgba(0, 35, 75, 0.26);
   margin: 1rem 0 0.5rem;
 }
-.about_area__cta-ceo-intro .ceo-title h3 {
+.about_area .about__cta-ceo-intro .ceo-title h3 {
   font-size: 1.4rem;
   color: #838A95;
 }
@@ -2245,6 +2298,12 @@ section {
   top: -15rem;
   overflow: hidden;
 }
+@media (max-width: 480px) {
+  .our-work-area .our__work {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .our-work-area .our__work--wrapper--card {
   position: relative;
   width: 200px;
@@ -2292,6 +2351,16 @@ section {
   font-weight: 600;
   color: #00234B;
   margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .our-work-area .our__work--wrapper--card--content-heading h3 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 520px) {
+  .our-work-area .our__work--wrapper--card--content-heading h3 {
+    font-size: 1.6rem;
+  }
 }
 
 .work__arrow {

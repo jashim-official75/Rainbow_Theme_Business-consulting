@@ -80,6 +80,18 @@ var mySwiper = new Swiper('.our__work', {
       slidesPerView: 1.5,
       spaceBetween: 5,
     },
+    450: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    420: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
   },
 });
 

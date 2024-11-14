@@ -65,10 +65,15 @@
             @include respond('1440') {
                 width: 70%;
             }
+            @include respond('1280')
+            {
+                width: 65%;
+            }
 
             @include respond('768') {
                 display: none;
             }
+
 
             &-circle {
                 position: absolute;
@@ -83,8 +88,14 @@
                 align-items: center;
                 justify-content: center;
 
+                @include respond('1280')
+                {
+                    top: -9.5rem;
+                }
+
                 img {
                     width: 80%;
+
                 }
             }
 
@@ -158,7 +169,15 @@
 
         &__social-proof {
             position: relative;
-
+            @include respond('768') 
+            {
+                padding: 2rem 0;
+            }
+            @include respond('520')
+            {
+                flex-direction: column;
+                justify-content: center;
+            } 
             &::after {
                 content: "";
                 position: absolute;
@@ -245,6 +264,8 @@
         &__actions {
             @include respond('768') {
                 flex-direction: column;
+                gap: 0;
+                margin: 1rem 0;
             }
         }
     }

@@ -28,6 +28,11 @@
         position: relative;
         top: -15rem;
         overflow: hidden;
+        @include respond('480')
+        {
+            width: 80%;
+            margin: 0 auto;
+        }
         &--wrapper {
             &--card {
                 position: relative;
@@ -71,6 +76,15 @@
                             font-weight: 600;
                             color: $text-dark;
                             margin-bottom: 0;
+                            @include respond('768') 
+                            {
+                              font-size: 2rem;  
+                            }
+                            @include respond('520') 
+                            {
+                              font-size: 1.6rem;  
+                            }
+
                         }
                     }
                 }
