@@ -100,21 +100,36 @@
 .mobile_sidebar {
   background-color: #00234B;
   padding: 3rem 0;
-  width: 280px;
+  width: 28rem;
   position: fixed;
   top: 0;
-  left: -280px;
+  left: -28rem;
   height: 100vh;
   overflow-y: auto;
   z-index: 10000000;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #5163FF rgba(255, 255, 255, 0.1);
+}
+.mobile_sidebar::-webkit-scrollbar {
+  width: 0.2rem;
+}
+.mobile_sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+.mobile_sidebar::-webkit-scrollbar-thumb {
+  background-color: #5163FF;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 .mobile_sidebar__logo img {
   width: 80%;
   margin: 2rem auto 0;
   display: block;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .mobile_sidebar.active {
   left: 0;
@@ -154,6 +169,8 @@
 }
 .mobile_sidebar .mobile__btn .primary-button {
   width: 80%;
+  padding: 1.6rem 2rem;
+  font-size: 1.6rem;
 }
 .mobile_sidebar .mobile__menu ul {
   list-style: none;
@@ -2613,7 +2630,7 @@ section {
   font-family: "Inter", sans-serif;
 }
 .footer_area .footer__newsletter .newsletter__inputbox .subscribe-btn {
-  display: none;
+  display: block;
 }
 @media (max-width: 768px) {
   .footer_area .footer__newsletter .newsletter__inputbox .subscribe-btn {
@@ -2682,9 +2699,17 @@ section {
   padding: 0 1rem;
 }
 
+.mobile_subscirbe__btn {
+  display: none;
+}
 .mobile_subscirbe__btn .primary-button {
-  width: 100% !important;
+  width: 100%;
   display: block;
+}
+@media (max-width: 768px) {
+  .mobile_subscirbe__btn {
+    display: block;
+  }
 }
 
 #services {
@@ -2940,7 +2965,7 @@ section {
   .our-work-area .our__work--wrapper--card--content {
     padding: 2rem;
     bottom: 0;
-    left: 0;
+    left: 1rem;
   }
 }
 .our-work-area .our__work--wrapper--card--content-heading {

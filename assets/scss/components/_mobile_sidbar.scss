@@ -1,3 +1,4 @@
+
 @import "../utilities/transition";
 
 .overlay {
@@ -16,15 +17,32 @@
 .mobile_sidebar {
   background-color: $text-dark;
   padding: 3rem 0;
-  width: 280px;
+  width: 28rem;
   position: fixed;
   top: 0;
-  left: -280px;
+  left: -28rem;
   height: 100vh;
   overflow-y: auto;
   z-index: 10000000;
   @include transition(all 0.3s ease-in-out);
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0.2rem; 
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $light-color-1; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $theme-color; 
+    border-radius: 10px;
+    border: 2px solid $light-color-1; 
+  }
+  scrollbar-width: thin; 
+  scrollbar-color: $theme-color $light-color-1;
+
   &__logo
   {
     img 
@@ -32,6 +50,8 @@
       width: 80%;
       margin: 2rem auto 0; 
       display: block;
+      @include border-radius(1rem);
+      overflow: hidden;
     }
   }
   &.active {
@@ -68,6 +88,8 @@
     .primary-button 
     {
       width: 80%;
+      padding: 1.6rem 2rem;
+      font-size: 1.6rem;
     }
   }
 

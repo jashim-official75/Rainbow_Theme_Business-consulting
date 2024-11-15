@@ -369,7 +369,7 @@
 
                     .subscribe-btn
                     {
-                        display: none;
+                        display: block;
                         @include respond('768')
                         {
                             display: none;
@@ -451,9 +451,15 @@
 
 .mobile_subscirbe__btn 
 {
+    display: none;
     .primary-button 
     {
-        width: 100% !important;
+        width: 100% ;
+        display: block;
+    }
+
+    @include respond('768')
+    {
         display: block;
     }
 }
