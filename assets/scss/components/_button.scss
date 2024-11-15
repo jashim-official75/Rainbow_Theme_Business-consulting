@@ -22,8 +22,8 @@
   text-shadow: $text-shadow;
 
   @include respond('768') {
-    padding: 1.4rem 2rem;
-    font-size: 1.4rem;
+      padding: 1.87rem 4rem;
+      font-size: 1.8rem;
   }
 
   &:hover {

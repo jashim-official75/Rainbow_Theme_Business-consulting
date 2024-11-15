@@ -152,6 +152,10 @@ h3 {
       {
         font-size: 14rem;
       }
+      @include respond('991')
+      {
+        font-size: 10rem;
+      }
       @include respond('768')
       {
         font-size: 10rem;
@@ -174,6 +178,10 @@ h3 {
         position: relative;
         left: 30%;
         top: -5rem;
+        @include respond('991')
+        {
+          top: -3rem;
+        } 
         @include respond('768') 
         {
           top: -3.5rem;

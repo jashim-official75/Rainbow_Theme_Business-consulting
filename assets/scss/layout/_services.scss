@@ -132,6 +132,10 @@
                 p {
                     font-size: 1.8rem;
                     font-weight: 400;
+                    @include respond('768') 
+                    {
+                        font-size: 1.6rem;
+                    }
                 }
 
             }

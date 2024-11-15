@@ -81,7 +81,6 @@
                         object-position: top;
                     }
                 }
-              
 
                 &--content {
                     position: absolute;
@@ -90,6 +89,13 @@
                     width: 100%;
                     padding: 3rem;
                     @include transition(all 0.3s ease-in-out);
+
+                    @include respond('768')
+                    {
+                        padding: 2rem;
+                        bottom: 0;
+                        left: 0;
+                    }
 
                     &-heading {
                         background: $light-color;
