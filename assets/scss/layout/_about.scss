@@ -123,6 +123,19 @@
                 transform: translateY(-50%);
                right: 5%;
             }
+            @include respond('480')
+            {
+               right: 6%;
+            }
+            @include respond('420')
+            {
+               right: 4%;
+            }
+            @include respond('400')
+            {
+               right: 3%;
+            }
+            
             .circle_img {
                 width: 100%;
             }
@@ -280,7 +293,6 @@
         }
         }
 
-    
 
     .company__statistics 
     {

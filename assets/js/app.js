@@ -211,34 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ==========================
-// MOUSE CURSOR CHANGE
-// ==========================
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorOutline = document.querySelector(".cursor-outline");
-
-window.addEventListener("mousemove", function (e) {
-  const posX = e.pageX;
-  const posY = e.pageY;
-
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
-
-
-  cursorOutline.animate(
-    [
-      { left: `${posX}px`, top: `${posY}px` } 
-    ],
-    {
-      duration: 500,
-      fill: "forwards" 
-    }
-  );
-});
-
-
-// ==========================
 // SWIPER CAROUSEL FOR OUR WORK SECTION
 // ==========================
+
 const swiperContainer = document.querySelector('.our__work');
 const slides = swiperContainer.querySelectorAll('.swiper-slide');
 
@@ -300,7 +275,6 @@ var mySwiper = new Swiper('.our__work', {
     },
     400: {
       slidesPerView: 1,
-      spaceBetween: 5,
     },
     380: {
       slidesPerView: 1,

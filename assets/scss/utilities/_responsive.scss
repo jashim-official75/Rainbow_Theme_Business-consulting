@@ -1,5 +1,9 @@
 @mixin respond($breakpoint) {
-  @if $breakpoint == '420' {
+  @if $breakpoint == '400' {
+    @media (max-width: #{$breakpoint-400}) {
+      @content;
+    }
+  } @else if $breakpoint == '420' {
     @media (max-width: #{$breakpoint-420}) {
       @content;
     }
