@@ -89,7 +89,10 @@
                     width: 100%;
                     padding: 3rem;
                     @include transition(all 0.3s ease-in-out);
-
+                    @include respond('991')
+                    {
+                        padding: 2.5rem;
+                    }
                     @include respond('768')
                     {
                         padding: 2rem;
@@ -111,7 +114,11 @@
                             font-weight: 600;
                             color: $text-dark;
                             margin-bottom: 0;
-                            @include respond('768') 
+                            @include respond('1556') 
+                            {
+                                font-size: 1.8rem;
+                            }
+                            @include respond('991') 
                             {
                               font-size: 2rem;  
                             }

@@ -281,7 +281,7 @@
     <div class="marquee__container">
 
         <div class="marquee__container-content">
-            <span> <img src="assets/images/star.svg" class="rotate" alt=""> CREATIVE <img src="assets/images/star.svg"
+            <span> <img src="assets/images/star.svg" class="circle" alt=""> CREATIVE <img src="assets/images/star.svg"
                     class="rotate" alt="">
                 SOLUTIONS <img src="assets/images/badge.svg" class="rotate" alt=""> EXPERT GUIDANCE <img
                     src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt="">
@@ -937,88 +937,7 @@
     <!-- ==========LAZYLOAD JS ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
-    <script>
-
     
-// ======================================
-//AOS NEXT ANIMATION ACTIVATION CODE
-// ======================================
-AOS.init();
-
-        // ALL GSAP ANIMATION
-
-        var tl = gsap.timeline()
-
-        tl.from(".header__logo", {
-            y: -30,
-            duration: 1,
-            opacity: 0,
-            ease: "power2.out",
-        }, "0")
-
-        tl.from(".hero__title", {
-            y: -100,
-            duration: 1.5,
-            ease: "power2.out",
-            opacity: 0,
-            delay: 0.2,
-        }, 0);
-
-
-        tl.from(".nav__menu li , .primary-btn", {
-            y: -30,
-            duration: 1,
-            ease: "power2.out",
-            stagger: 0.15,
-            opacity: 0,
-            delay: 0.2,
-        })
-
-        gsap.to(".circle", {
-            rotation: 360,
-            repeat: -1,
-            ease: "linear",
-            duration: 10,
-        })
-
-        gsap.to(".dancer", {
-            y: -50,
-            rotation: 20,
-            duration: 3,
-            yoyo: true,
-            repeat: -1,
-            ease: "power1.inOut",
-        });
-
-        gsap.from(".fadein", {
-            x: 20,
-            opacity: 0,
-            duration: 2,
-
-        })
-
-        gsap.from(".fadeleft", {
-            x: -100,
-            opacity: 0,
-            duration: 2,
-
-        })
-
-        const waveHeading = document.querySelector(".hero__description");
-        waveHeading.innerHTML = waveHeading.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-        gsap.fromTo(".letter", {
-            y: 50,
-            opacity: 0
-        }, {
-            y: 0,
-            opacity: 1,
-            stagger: 0.05,
-            ease: "back.out(1)",
-            duration: 0.5
-        });
-
-    </script>
 
 </body>
 

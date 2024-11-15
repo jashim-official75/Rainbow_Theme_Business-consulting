@@ -18,6 +18,11 @@
        @include border-radius(10px);
        @include box-shadow($shadow);
        
+       @include respond('991')
+       {
+        justify-content: center;
+        gap: 2rem;
+       }
 
     }
     &__info 
@@ -39,7 +44,7 @@
         .social-icons {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
     
             a {
                 color: $text-color;
@@ -123,5 +128,12 @@
             }
         }
       }
+    }
+    &__cta 
+    {
+        @include respond('991')
+        {
+           display: none;
+        }
     }
 }
