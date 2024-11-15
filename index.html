@@ -12,7 +12,6 @@
     <link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
     <!-- For Android (Chrome) -->
     <link rel="icon" sizes="192x192" href="assets/images/favicon/android-chrome-192x192.png">
-
     <!-- For Microsoft Tiles -->
     <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#ffffff">
@@ -25,13 +24,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+
     <!-- ==========REMIX ICON CSS LINK========== -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 
-    <!-- ==========SMOOTH SCROLL CSS LINK========== -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.css">
     <!-- ==========AOS ANIMATION CSS LINK========== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" async />
+
     <!-- ==========SWIPER SLIDER CSS LINK========== -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" async />
 
@@ -42,842 +41,873 @@
 
 <body>
 
-
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
-    
+    <!-- ===================================== -->
+    <!-- HEADER PART START -->
+    <!-- ===================================== -->
+
+    <header id="header" class="header">
+
+        <div class="container">
+            <div class="header__top-bar flex-content">
+
+                <div class="header__info flex g-5 align-items-center" data-aos="fade-left">
+                    <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
+                    <div class="separator"></div>
+                    <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i
+                                class="ri-discuss-line"></i>
+                            support@gmail.com</a> </p>
+                </div>
+
+                <div class="header__logo">
+                    <a href="index.html">
+                        <img src="assets/images/logo.webp" alt="Rainbow-Themes Logo">
+                    </a>
+                </div>
+
+                <div class="header__language-social flex align-items-center">
+
+                    <div class="language-dropdown flex align-items-center">
+                        <i class="language-dropdown__icon ri-global-line ri-xl"></i>
+                        <div class="language-dropdown__menu">
+                            <button class="language-dropdown__button" id="languageButton"
+                                onclick="toggleDropdown()">English</button>
+                            <div class="language-dropdown__content">
+                                <div class="language-dropdown__item" onclick="changeLanguage('en')">English</div>
+                                <div class="language-dropdown__item" onclick="changeLanguage('bn')">Bangla</div>
+                            </div>
+                        </div>
+                        <i class="language-dropdown__arrow ri-arrow-down-s-line ri-2x"></i>
+                    </div>
+
+                    <div class="separator"></div>
+                    <div class="social-icons">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <nav class="nav flex-content">
+
+                <div class="nav__icons flex g-10 align-items-center">
+                    <a href="#" class="menu-icon menu__icon"><i class="ri-menu-line"></i></a>
+
+                    <div class="separator"></div>
+
+                    <a href="#" class="cart-icon">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span class="cart-count">02</span>
+                    </a>
+
+                    <div class="separator"></div>
+
+                    <a href="#" class="search-icon"><i class="ri-search-line"></i></a>
+                </div>
+
+                <ul class="nav__menu flex">
+                    <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                    <li><a href="#about-us">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#our-work">Projects</a></li>
+                    <li><a href="#testimonial">Testomonial</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+
+                <button class="nav__cta primary-button" data-aos="fade-left">Get a free quote</button>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- ===================================== -->
+    <!-- HEADER PART END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- MOBILE HEADER PART END -->
+    <!-- ===================================== -->
+
+    <header class="mobile_header w-100">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/mobile-logo.png" alt="">
+            </a>
+        </div>
+        <div class="cart__icon">
+            <a href="#" class="cart-icon">
+                <i class="ri-shopping-cart-line"></i>
+                <span class="cart-count">02</span>
+            </a>
+        </div>
+        <div class="menu__icon">
+            <i class="ri-menu-line"></i>
+        </div>
+    </header>
+
+    <!-- Overlay for dark background -->
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <div class="mobile_sidebar">
+        <div class="menu__close-btn">
+            <i class="ri-close-line"></i>
+        </div>
+        <div class="mobile_sidebar__logo">
+            <a href="index.html">
+                <img src="assets/images/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="mobile__menu">
+            <ul>
+                <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#our-work">Projects</a></li>
+                <li><a href="#testimonial">Testomonial</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </div>
+        <h3> Contact Us</h3>
+        <hr>
+        <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
+
+        <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i class="ri-discuss-line"></i>
+                support@gmail.com</a> </p>
+        <br>
+        <div class="mobile__btn">
+            <button class="primary-button">Get a free quote</button>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+
+        </div>
+
+    </div>
+    <!-- ===================================== -->
+    <!-- MOBILE HEADER PART END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- HERO PART START -->
+    <!-- ===================================== -->
+    <main id="hero" class="hero_area">
+        <div class="hero__shape--left" data-aos="fade-right">
+            <img src="assets/images/hero-left-shape.webp" alt="">
+        </div>
+
         <div class="hero__shape--right">
             <img src="assets/images/Rectangle 4407.png" alt="">
         </div>
+    
+        <div class="container">
 
-        <!-- ===================================== -->
-        <!-- HEADER PART START -->
-        <!-- ===================================== -->
+            <section class="hero">
+                <div class="cube_box dancer">
+                    <img src="assets/images/3d-cube.webp" alt="">
+                </div>
+                <h1 class="hero__title">We shape the future  <br> of <span
+                        class="highlight__text">business</span>
+                    <span>
+                        <img src="assets/images/rocket.webp" alt="" class="rocekt_img" width="92px"
+                            data-aos="fade-up"></span> </h1>
 
-        <header id="header" class="header">
-
-            <div class="container">
-                <div class="header__top-bar flex-content">
-
-                    <div class="header__info flex g-5 align-items-center" data-aos="fade-left">
-                        <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
-                        <div class="separator"></div>
-                        <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i
-                                    class="ri-discuss-line"></i>
-                                support@gmail.com</a> </p>
+                <div class="mobile__hero-playbtn">
+                    <div class="hero__img-circle">
+                        <button class="hero__img-playbutton playButtonMobile" id="playButton"><i
+                                class="ri-play-large-fill ri-4x"></i></button>
+                        <img src="assets/images/text-circle.svg" alt="" class="circle">
                     </div>
+                </div>
+                <p class="hero__description">
+                    A business consultant is a professional who provides expert advice and guidance to businesses on
+                    various aspects.
+                </p>
 
-                    <div class="header__logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo.webp" alt="Rainbow-Themes Logo">
-                        </a>
-                    </div>
 
-                    <div class="header__language-social flex align-items-center">
 
-                        <div class="language-dropdown flex align-items-center">
-                            <i class="language-dropdown__icon ri-global-line ri-xl"></i>
-                            <div class="language-dropdown__menu">
-                                <button class="language-dropdown__button" id="languageButton"
-                                    onclick="toggleDropdown()">English</button>
-                                <div class="language-dropdown__content">
-                                    <div class="language-dropdown__item" onclick="changeLanguage('en')">English</div>
-                                    <div class="language-dropdown__item" onclick="changeLanguage('bn')">Bangla</div>
-                                </div>
-                            </div>
-                            <i class="language-dropdown__arrow ri-arrow-down-s-line ri-2x"></i>
+                <div class="hero__actions flex align-items-center g-20 my-2">
+                    <button class="primary-button primary-button__hero-btn my-3">Explore more</button>
+
+                    <div class="hero__contact flex align-items-center g-15">
+                        <div class="contact_icon flex-center">
+                            <i class="ri-phone-fill ri-3x"></i>
                         </div>
 
-                        <div class="separator"></div>
-                        <div class="social-icons">
+                        <div class="free_consult">
+                            <p>Free Consultant</p>
+                            <a href="tel:4065550120">(406) 555-0120</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__social-proof flex">
+                    <img src="assets/images/user-one.webp" alt="User 1">
+                    <img src="assets/images/user-two.webp" alt="User 2">
+                    <img src="assets/images/user-three.webp" alt="User 3">
+                    <img src="assets/images/user-four.webp" class="" alt="User 4">
+                    <span>
+                        <p class="text-theme">2.5K+</p> Business People <br> Already Registered
+                    </span>
+                </div>
+
+            </section>
+
+            <div class="hero__img" data-aos="fade-up">
+                <div class="hero__img-circle">
+                    <button class="hero__img-playbutton playButtonDesktop" id="playButton"><i
+                            class="ri-play-large-fill ri-4x"></i></button>
+                    <img src="assets/images/text-circle.svg" alt="" class="circle">
+                </div>
+                <img src="assets/images/hero-banner.webp" alt="" class="hero_btoom_img">
+            </div>
+
+            <div id="videoPopup" class="popup">
+                <div class="popup__content">
+                    <button class="popup__close-btn" id="closePopup"><i class="ri-close-large-line"></i></button>
+                    <iframe id="videoIframe" class="popup__iframe" width="560" height="315" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <div class="marquee__container">
+
+        <div class="marquee__container-content">
+            <span> <img src="assets/images/star.svg" class="rotate" alt=""> CREATIVE <img src="assets/images/star.svg"
+                    class="rotate" alt="">
+                SOLUTIONS <img src="assets/images/badge.svg" class="rotate" alt=""> EXPERT GUIDANCE <img
+                    src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt="">
+                CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg" alt="">
+                EXPERT GUIDANCE <img src="assets/images/badge.svg" alt="">
+                CONSULTING ✦ </span>
+
+        </div>
+        <div class="marque__line">
+
+        </div>
+    </div>
+
+    <!-- ===================================== -->
+    <!-- HERO PART END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- ABOUT US PART START -->
+    <!-- ===================================== -->
+    <section id="about-us" class="about_area">
+        <div class="union_image" data-aos="fade-in">
+            <img src="assets/images/union-right.webp" alt="">
+        </div>
+        <div class="container">
+            <div class="about grid grid-2">
+                <div class="about__img ">
+                    <div class="about__images flex ">
+
+                        <div class="about__images-wrap">
+                            <img src="assets/images/about-img-one.webp" alt="" class="about_one">
+                            <div class="about__images-single ">
+                                <img src="assets/images/about-img-two.webp" alt="" class="about_two">
+                            </div>
+                        </div>
+                        <div class="about__circle">
+                            <div class="about_circle">
+                                <img src="assets/images/about-circle.webp" alt="" class="circle_img circle">
+                                <div class="circle-logo">
+                                    <img src="assets/images/shape.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__info">
+
+                    <div class="about__btn">
+                        <a href="#" class="glow-button"> <img src="assets/images/white-arrow.webp" alt="">
+                            <span>Know
+                                more about</span></a>
+                    </div>
+
+                    <div class="about__info-text my-5 ">
+                        <h2>All-in-one web solution
+                            for your business</h2>
+                        <p>We are creative agency, we are here to helping your business <br> growth consectetur
+                            adipiscing.</p>
+                        <ul>
+                            <li> <span class="circle_dot">
+                                    <img src="assets/images/dot.webp" alt="">
+                                </span> There are many variations of passages available</li>
+                            <li> <span class="circle_dot">
+                                    <img src="assets/images/dot.webp" alt="">
+                                </span> Majority have suffered alteration in some form</li>
+                            <li> <span class="circle_dot">
+                                    <img src="assets/images/dot.webp" alt="">
+                                </span> </span> Contrary to popular belief is not simply random</li>
+                        </ul>
+                    </div>
+
+                    <div class="about__cta flex align-items-center g-20">
+                        <div class="about__cta-button">
+                            <div class="primary-button">More about us</div>
+                        </div>
+                        <div class="about__cta-ceo-intro flex align-items-center g-20">
+                            <div class="ceo-img">
+                                <img src="assets/images/ceo.webp" alt="">
+                            </div>
+                            <div class="ceo-title">
+                                <img src="assets/images/ceo-signature.webp" alt="">
+                                <div class="hr"></div>
+                                <h3>CEO at Company</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="company__statistics">
+                <div class="statistics grid grid-5">
+                    <div class="statistics__card">
+                        <span class="number" data-target="99">0%</span>
+                        <h3>Business Strategy</h3>
+                    </div>
+                    <div class="statistics__card">
+                        <span class="number" data-target="80">0%</span>
+                        <h3>Targeted Acquisition</h3>
+                    </div>
+                    <div class="statistics__card">
+                        <span class="number" data-target="62">0k+</span>
+                        <h3>Complete Projects</h3>
+                    </div>
+                    <div class="statistics__card">
+                        <span class="number" data-target="15">0k+</span>
+                        <h3>Happy Customers</h3>
+                    </div>
+                    <div class="statistics__card">
+                        <span class="number" data-target="100">0+</span>
+                        <h3>Consultant Advisors</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- ABOUT US PART START -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- SETVICES  PART START -->
+    <!-- ===================================== -->
+    <section id="services" class="services__area">
+        <div class="section_union fadeleft">
+            <img src="assets/images/union-left.webp" alt="">
+        </div>
+
+        <div class="container">
+            <div class="service">
+                <div class="gradient_circle"></div>
+                <div class="srvice__btn flex-center flex-column flex-wrap g-20">
+                    <a href="#" class="glow-button"> <img src="assets/images/white-arrow.webp" alt=""> <span>What we
+                            do</span></a>
+                    <h2 class="service_title">Our Popular Services</h2>
+                </div>
+                <div class="primary_circle"></div>
+
+                <div class="service__card flex align-items-center g-20">
+                    <div class="service__card-img">
+                        <img src="assets/images/service-one.webp" alt="">
+                    </div>
+                    <div class="service__card-content">
+                        <div class="service__card-content-tagbtn"><span class="highlight__text">Service-1</span>
+                        </div>
+                        <div class="service__card-heading">
+                            <h2>Digital Marketing</h2>
+                        </div>
+                        <div class="service__card-desc">
+                            <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                a passion for perfection and an eye for detail our dedicated team of event.</p>
+                            <div class="Read_deatils-btn">
+                                <button class="border-btn"><span>Read Deatils</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service__card flex align-items-center g-20">
+                    <div class="service__card-img">
+                        <img src="assets/images/about-img-two.webp" alt="">
+                    </div>
+                    <div class="service__card-content">
+                        <div class="service__card-content-tagbtn"><span class="highlight__text">Service-2</span>
+                        </div>
+                        <div class="service__card-heading">
+                            <h2>Business Strategy</h2>
+                        </div>
+                        <div class="service__card-desc">
+                            <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                a passion for perfection and an eye for detail our dedicated team of event.</p>
+                            <div class="Read_deatils-btn">
+                                <button class="border-btn"><span>Read Deatils</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service__card flex align-items-center g-20">
+                    <div class="service__card-img">
+                        <img src="assets/images/service-three.webp" alt="">
+                    </div>
+                    <div class="service__card-content">
+                        <div class="service__card-content-tagbtn"><span class="highlight__text">Service-3</span>
+                        </div>
+                        <div class="service__card-heading">
+                            <h2>Finance Consultant</h2>
+                        </div>
+                        <div class="service__card-desc">
+                            <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                a passion for perfection and an eye for detail our dedicated team of event.</p>
+                            <div class="Read_deatils-btn">
+                                <button class="border-btn"><span>Read Deatils</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service__card flex align-items-center g-20">
+                    <div class="service__card-img">
+                        <img src="assets/images/service-four.webp" alt="">
+                    </div>
+                    <div class="service__card-content">
+                        <div class="service__card-content-tagbtn"><span class="highlight__text">Service-4</span>
+                        </div>
+                        <div class="service__card-heading">
+                            <h2>One-to-one Consulting</h2>
+                        </div>
+                        <div class="service__card-desc">
+                            <p>Where we specialize in transforming your visions into unforgettable experiences. With
+                                a passion for perfection and an eye for detail our dedicated team of event.</p>
+                            <div class="Read_deatils-btn">
+                                <button class="border-btn"><span>Read Deatils</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- SETVICES  PART END -->
+    <!-- ===================================== -->
+
+
+
+    <!-- ===================================== -->
+    <!-- OUR WORK  PART START -->
+    <!-- ===================================== -->
+    <section id="our-work" class="our-work-area">
+        <div class="container work__area">
+            <div class="our_wrorkshowcase">
+                <img src="assets/images/work-showcase.svg" alt="">
+            </div>
+
+            <div class="large__title">
+
+                <div class="work__title">
+                    <h4>Recent</h4>
+                    <h4>Works</h4>
+                </div>
+
+                <div class="subheading">
+                    <p>Ready to transform your hard work into <br> a thriving, stress-free business?</p>
+                </div>
+            </div>
+
+            <div class="work__arrow">
+
+                <div class="swiper-button-next" style="left: -5rem;">
+                    <i class="ri-arrow-left-line icon-gradient"></i>
+                </div>
+                <div class="swiper-button-prev">
+
+                    <i class="ri-arrow-right-line icon-gradient"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="our__work">
+
+            <div class="swiper-wrapper our__work--wrapper">
+
+
+                <div class="swiper-slide our__work--wrapper--card">
+
+                    <div class="our__work--wrapper--card--img">
+                        <img src="assets/images/about-img-one.webp" alt="">
+                    </div>
+                    <div class="our__work--wrapper--card--content">
+                        <div class="our__work--wrapper--card--content-btn">
+                            <button class="gradient-btn"><span>2024, Business</span></button>
+                        </div>
+                        <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                            <h3>Business Consulting Service</h3>
+                            <div class="content__cta-btn">
+                                <a href="#">
+                                    <button class="gradient-btn gradient-btn--circle">
+                                        <img src="assets/images/up-arrow.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="swiper-slide our__work--wrapper--card">
+
+                    <div class="our__work--wrapper--card--img">
+                        <img src="assets/images/about-img-two.webp" alt="">
+                    </div>
+                    <div class="our__work--wrapper--card--content">
+                        <div class="our__work--wrapper--card--content-btn">
+                            <button class="gradient-btn"><span>2024, Business</span></button>
+                        </div>
+                        <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                            <h3>Business Consulting Service</h3>
+                            <div class="content__cta-btn">
+                                <a href="#">
+                                    <button class="gradient-btn gradient-btn--circle">
+                                        <img src="assets/images/up-arrow.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide our__work--wrapper--card">
+
+                    <div class="our__work--wrapper--card--img">
+                        <img src="assets/images/service-four.webp" alt="">
+                    </div>
+                    <div class="our__work--wrapper--card--content">
+                        <div class="our__work--wrapper--card--content-btn">
+                            <button class="gradient-btn"><span>2024, Business</span></button>
+                        </div>
+                        <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                            <h3>Business Consulting Service</h3>
+                            <div class="content__cta-btn">
+                                <a href="#">
+                                    <button class="gradient-btn gradient-btn--circle">
+                                        <img src="assets/images/up-arrow.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide our__work--wrapper--card">
+
+                    <div class="our__work--wrapper--card--img">
+                        <img src="assets/images/service-three.webp" alt="">
+                    </div>
+                    <div class="our__work--wrapper--card--content">
+                        <div class="our__work--wrapper--card--content-btn">
+                            <button class="gradient-btn"><span>2024, Business</span></button>
+                        </div>
+                        <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                            <h3>Business Consulting Service</h3>
+                            <div class="content__cta-btn">
+                                <a href="#">
+                                    <button class="gradient-btn gradient-btn--circle">
+                                        <img src="assets/images/up-arrow.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-slide our__work--wrapper--card">
+
+                    <div class="our__work--wrapper--card--img">
+                        <img src="assets/images/service-one.webp" alt="">
+                    </div>
+                    <div class="our__work--wrapper--card--content">
+                        <div class="our__work--wrapper--card--content-btn">
+                            <button class="gradient-btn"><span>2024, Business</span></button>
+                        </div>
+                        <div class="our__work--wrapper--card--content-heading flex align-items-center">
+                            <h3>Business Consulting Service</h3>
+                            <div class="content__cta-btn">
+                                <a href="#">
+                                    <button class="gradient-btn gradient-btn--circle">
+                                        <img src="assets/images/up-arrow.svg" alt="">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- OUR WORK  PART END -->
+    <!-- ===================================== -->
+
+    <!-- ===================================== -->
+    <!-- TESTiMONIAL  PART START -->
+    <!-- ===================================== -->
+    <section id="testimonial" class="testimonial--slider">
+        <div class="left_circle">
+            <div class="gradient_circle"></div>
+        </div>
+        <div class="container">
+            <div class="slider-inner">
+                <div class="slider-row">
+                    <div class="testimonial-swiper slider-custom-image">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-wrap--inner">
+
+                                        <h4 class="testimonial-heading">“Simply dummy text of the printing and
+                                            Expert
+                                            Advisor. lorem Ipsum has been the standard dummy text ever since the
+                                            when an
+                                            unknown printer took a galley of type and scrambled.”</h4>
+                                        <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
+                                        <div class="testimonila_star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-wrap--inner">
+
+                                        <h4 class="testimonial-heading">“Simply dummy text of the printing and
+                                            Expert
+                                            Advisor. lorem Ipsum has been the standard dummy text ever since the
+                                            when an
+                                            unknown printer took a galley of type and scrambled.”</h4>
+                                        <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
+                                        <div class="testimonila_star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="testimonial-wrap">
+
+                                    <div class="testimonial-wrap--inner">
+                                        <h4 class="testimonial-heading">“Simply dummy text of the printing and
+                                            Expert
+                                            Advisor. lorem Ipsum has been the standard dummy text ever since the
+                                            when an
+                                            unknown printer took a galley of type and scrambled.”</h4>
+                                        <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
+                                        <div class="testimonila_star">
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-fill"></i>
+                                            <i class="ri-star-half-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination slider-custom-image-pagination"></div>
+
+                        <div class="testomonail__arrow">
+                            <div class="swiper-button-next">
+                                <i class="ri-arrow-right-line icon-gradient"></i>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <i class="ri-arrow-left-line icon-gradient"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gradient_circle"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ===================================== -->
+    <!-- TESTOMONIAL  PART END -->
+    <!-- ===================================== -->
+
+
+
+    <!-- ===================================== -->
+    <!-- FOOTER PART START -->
+    <!-- ===================================== -->
+    <footer id="footer" class="footer_area">
+        <div class="circle__icon circle__icon--left dancer">
+            <img src="assets/images/circle-3d.webp" alt="">
+        </div>
+        <div class="container">
+            <div class="footer flex flex-wrap g-20">
+                <div class="footer__single w-33">
+                    <div class="footer__single-logo">
+                        <a href="#">
+                            <img src="assets/images/logo.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="footer__single-desc ">
+                        <p class="color-white py-2">Introducing our team of talented and skilled professionals who
+                            are
+                            ready to increase your productivity and bring your business.</p>
+                    </div>
+                    <div class="footer__single-info">
+                        <h2>We Are Available !!</h2>
+                        <span>Mon-Sat: 10:00am - 08:00pm</span>
+                    </div>
+                    <div class="footer__single-social my-2">
+                        <div class="social-icons flex flex-wrap align-items-center g-15">
                             <a href="#"><i class="ri-facebook-fill"></i></a>
                             <a href="#"><i class="ri-twitter-fill"></i></a>
                             <a href="#"><i class="ri-instagram-line"></i></a>
                             <a href="#"><i class="ri-linkedin-fill"></i></a>
                         </div>
                     </div>
-
                 </div>
-
-                <nav class="nav flex-content">
-
-                    <div class="nav__icons flex g-10 align-items-center">
-                        <a href="#" class="menu-icon"><i class="ri-menu-line"></i></a>
-
-                        <div class="separator"></div>
-
-                        <a href="#" class="cart-icon">
-                            <i class="ri-shopping-cart-line"></i>
-                            <span class="cart-count">02</span>
-                        </a>
-
-                        <div class="separator"></div>
-
-                        <a href="#" class="search-icon"><i class="ri-search-line"></i></a>
-                    </div>
-
-                    <ul class="nav__menu flex">
-                        <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                        <li><a href="#about-us">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-
-                    <button class="nav__cta primary-button" data-aos="fade-left">Get a free quote</button>
-                </nav>
-            </div>
-
-        </header>
-
-        <!-- ===================================== -->
-        <!-- HEADER PART END -->
-        <!-- ===================================== -->
-
-        <!-- ===================================== -->
-        <!-- MOBILE HEADER PART END -->
-        <!-- ===================================== -->
-
-        <header class="mobile_header w-100">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="">
-                </a>
-            </div>
-            <div class="menu__icon">
-                <i class="ri-menu-line"></i>
-            </div>
-        </header>
-        
-        <!-- Overlay for dark background -->
-        <div class="overlay"></div>
-        
-        <!-- Sidebar -->
-        <div class="mobile_sidebar">
-            <div class="menu__close-btn">
-                <i class="ri-close-line"></i>
-            </div>
-            <div class="mobile_header__logo">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="">
-                </a>
-            </div>
-            <div class="mobile__menu">
-                <ul>
-                    <li><a href="#header">Home <i class="ri-arrow-down-s-line"></i></a></li>
-                    <li><a href="#about-us">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <hr>
-            <p class="header__location small__text"> <i class="ri-map-pin-line"></i> 15th Street, USA</p>
-            <div class="separator"></div>
-            <p class="header__email small__text"> <a href="mailto:support@gmail.com"> <i class="ri-discuss-line"></i> support@gmail.com</a> </p>
-            <button class="nav__cta primary-button" data-aos="fade-up">Get a free quote</button>
-            <hr>
-        </div>
-        <!-- ===================================== -->
-        <!-- MOBILE HEADER PART END -->
-        <!-- ===================================== -->
-
-        <!-- ===================================== -->
-        <!-- HERO PART START -->
-        <!-- ===================================== -->
-        <main id="hero" class="hero_area">
-            <div class="hero__shape--left" data-aos="fade-right">
-                <img src="assets/images/hero-left-shape.webp" alt="">
-            </div>
-
-            <div class="container">
-
-                <section class="hero">
-                    <div class="cube_box dancer">
-                        <img src="assets/images/3d-cube.webp" alt="">
-                    </div>
-                    <h1 class="hero__title">We shape the future <span class="heading_shape"><img
-                                src="assets/images/heading-shape.webp" alt=""></span> <br> of <span
-                            class="highlight__text">business</span>
-                        <span>
-                            <img src="assets/images/rocket.webp" alt="" class="rocekt_img" width="92px" data-aos="fade-up"></span> </h1>
-                    <p class="hero__description">
-                        A business consultant is a professional who provides expert advice and guidance to businesses on
-                        various aspects.
-                    </p>
-                    <div class="hero__actions flex align-items-center g-20 my-2">
-                        <button class="primary-button primary-button__hero-btn my-3">Explore more</button>
-                        <div class="hero__contact flex align-items-center g-15">
-                            <div class="contact_icon flex-center">
-                                <i class="ri-phone-fill ri-3x"></i>
-                            </div>
-                            <div class="free_consult">
-                                <p>Free Consultant</p>
-                                <a href="tel:4065550120">(406) 555-0120</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero__social-proof flex">
-                        <img src="assets/images/user-one.webp" alt="User 1">
-                        <img src="assets/images/user-two.webp" alt="User 2">
-                        <img src="assets/images/user-three.webp" alt="User 3">
-                        <img src="assets/images/user-four.webp" class="" alt="User 4">
-                        <span>
-                            <p class="text-theme">2.5K+</p> Business People <br> Already Registered
-                        </span>
-                    </div>
-
-                </section>
-                <div class="hero__img" data-aos="fade-up">
-                    <div class="hero__img-circle">
-                        <button class="hero__img-playbutton" id="playButton"><i
-                                class="ri-play-large-fill ri-4x"></i></button>
-                        <img src="assets/images/text-circle.svg" alt="" class="circle">
-                    </div>
-                    <img src="assets/images/Banner Img.png" alt="">
-                </div>
-
-                <div id="videoPopup" class="popup">
-                    <div class="popup__content">
-                        <button class="popup__close-btn" id="closePopup"><i class="ri-close-large-line"></i></button>
-                        <iframe id="videoIframe" class="popup__iframe" width="560" height="315" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-
-            </div>
-        </main>
-        <div class="marquee__container">
-
-            <div class="marquee__container-content">
-                <span> <img src="assets/images/star.svg" class="rotate" alt=""> CREATIVE <img
-                        src="assets/images/star.svg" class="rotate" alt="">
-                    SOLUTIONS <img src="assets/images/badge.svg" class="rotate" alt=""> EXPERT GUIDANCE <img
-                        src="assets/images/badge.svg" alt=""> CONSULTING <img src="assets/images/star.svg" alt="">
-                    CREATIVE <img src="assets/images/star.svg" alt=""> SOLUTIONS <img src="assets/images/badge.svg"
-                        alt=""> EXPERT GUIDANCE <img src="assets/images/badge.svg" alt="">
-                    CONSULTING ✦ </span>
-
-            </div>
-            <div class="marque__line" data-aos="fade-in">
-
-            </div>
-        </div>
-
-        <!-- ===================================== -->
-        <!-- HERO PART END -->
-        <!-- ===================================== -->
-
-        <!-- ===================================== -->
-        <!-- ABOUT US PART START -->
-        <!-- ===================================== -->
-        <section id="about-us" class="about_area">
-            <div class="union_image">
-                <img src="assets/images/union-right.webp" alt="">
-            </div>
-            <div class="container">
-                <div class="about grid grid-2">
-                    <div class="about__img ">
-                        <div class="about__images flex ">
-
-                            <div class="about__images-wrap">
-                                <img src="assets/images/about-img-one.webp" alt="" class="about_one" >
-                                <div class="about__images-single ">
-                                    <img src="assets/images/about-img-two.webp" alt="" class="about_two">
-                                </div>
-                            </div>
-                            <div class="about__circle">
-                                <div class="about_circle">
-                                    <img src="assets/images/about-circle.webp" alt="" class="circle_img circle">
-                                    <div class="circle-logo">
-                                        <img src="assets/images/shape.png" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__info">
-
-                        <div class="about__btn">
-                            <a href="#" class="glow-button"> <img src="assets/images/white-arrow.webp" alt="">
-                                <span>Know
-                                    more about</span></a>
-                        </div>
-
-                        <div class="about__info-text my-5 ">
-                            <h2>All-in-one web solution
-                                for your business</h2>
-                            <p>We are creative agency, we are here to helping your business <br> growth consectetur
-                                adipiscing.</p>
+                <div class="footer__single  flex flex-wrap flex-1">
+                    <div class="footer__single-column w-33">
+                        <div class="footer__single-column-title">
+                            <h2>Quick Link</h2>
                             <ul>
-                                <li> <span class="circle_dot">
-                                        <img src="assets/images/dot.webp" alt="">
-                                    </span> There are many variations of passages available</li>
-                                <li> <span class="circle_dot">
-                                        <img src="assets/images/dot.webp" alt="">
-                                    </span> Majority have suffered alteration in some form</li>
-                                <li> <span class="circle_dot">
-                                        <img src="assets/images/dot.webp" alt="">
-                                    </span> </span> Contrary to popular belief is not simply random</li>
+                                <li><a href="#">About Company</a></li>
+                                <li><a href="#">Strategy</a></li>
+                                <li><a href="#">Investor Presentation</a></li>
+                                <li><a href="#">Investor Career</a></li>
+                                <li><a href="#">Meet Our Team </a></li>
+                                <li><a href="#">Get in Touch </a></li>
                             </ul>
                         </div>
-
-                        <div class="about__cta flex align-items-center g-20">
-                            <div class="about__cta-button">
-                                <div class="primary-button">More about us</div>
-                            </div>
-                            <div class="about__cta-ceo-intro flex align-items-center g-20">
-                                <div class="ceo-img">
-                                    <img src="assets/images/ceo.webp" alt="">
-                                </div>
-                                <div class="ceo-title">
-                                    <img src="assets/images/ceo-signature.webp" alt="">
-                                    <div class="hr"></div>
-                                    <h3>CEO at Company</h3>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="footer__single-column w-33">
+                        <div class="footer__single-column-title">
+                            <h2>Quick Link</h2>
+                            <ul>
+                                <li><a href="#">Business Consulting</a></li>
+                                <li><a href="#">Finance Strategy</a></li>
+                                <li><a href="#">Investor Presentation</a></li>
+                                <li><a href="#">Investor Career</a></li>
+                                <li><a href="#">Marketing Analysis </a></li>
+                                <li><a href="#">Tax Preparation</a></li>
+                            </ul>
                         </div>
                     </div>
 
-                </div>
+                    <div class="footer__single-column w-33">
+                        <div class="footer__single-column-title">
+                            <h2>Upcoming Event</h2>
 
-                <div class="company__statistics">
-                    <div class="statistics grid grid-5">
-                        <div class="statistics__card">
-                            <span class="number" data-target="99">0%</span>
-                            <h3>Business Strategy</h3>
-                        </div>
-                        <div class="statistics__card">
-                            <span class="number" data-target="80">0%</span>
-                            <h3>Targeted Acquisition</h3>
-                        </div>
-                        <div class="statistics__card">
-                            <span class="number" data-target="62">0k+</span>
-                            <h3>Complete Projects</h3>
-                        </div>
-                        <div class="statistics__card">
-                            <span class="number" data-target="15">0k+</span>
-                            <h3>Happy Customers</h3>
-                        </div>
-                        <div class="statistics__card">
-                            <span class="number" data-target="100">0+</span>
-                            <h3>Consultant Advisors</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ===================================== -->
-        <!-- ABOUT US PART START -->
-        <!-- ===================================== -->
-
-        <!-- ===================================== -->
-        <!-- SETVICES  PART START -->
-        <!-- ===================================== -->
-        <section id="services" class="services__area">
-            <div class="section_union fadeleft">
-                <img src="assets/images/union-left.webp" alt="">
-            </div>
-
-            <div class="container">
-                <div class="service">
-                    <div class="gradient_circle"></div>
-                    <div class="srvice__btn flex-center flex-column flex-wrap g-20">
-                        <a href="#" class="glow-button"> <img src="assets/images/white-arrow.webp" alt=""> <span>What we
-                                do</span></a>
-                        <h2 class="service_title">Our Popular Services</h2>
-                    </div>
-                    <div class="primary_circle"></div>
-
-                    <div class="service__card flex align-items-center g-20">
-                        <div class="service__card-img">
-                            <img src="assets/images/service-one.webp" alt="">
-                        </div>
-                        <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-1</span>
-                            </div>
-                            <div class="service__card-heading">
-                                <h2>Digital Marketing</h2>
-                            </div>
-                            <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
-                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
-                                <div class="Read_deatils-btn">
-                                    <button class="border-btn"><span>Read Deatils</span></button>
+                            <div class="footer__single-column-single-event">
+                                <div class="event__img">
+                                    <img src="assets/images/consult-one.webp" alt="">
+                                </div>
+                                <div class="footer__single-column-event_info">
+                                    <h3>Business Consulting</h3>
+                                    <span>26 March, USA</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="service__card flex align-items-center g-20">
-                        <div class="service__card-img">
-                            <img src="assets/images/about-img-two.webp" alt="">
-                        </div>
-                        <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-2</span>
-                            </div>
-                            <div class="service__card-heading">
-                                <h2>Business Strategy</h2>
-                            </div>
-                            <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
-                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
-                                <div class="Read_deatils-btn">
-                                    <button class="border-btn"><span>Read Deatils</span></button>
+                            <div class="footer__single-column-single-event">
+                                <div class="event__img">
+                                    <img src="assets/images/consult-two.webp" alt="">
+                                </div>
+                                <div class="footer__single-column-event_info">
+                                    <h3>Email Marketing</h3>
+                                    <span>29 September, CA</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="service__card flex align-items-center g-20">
-                        <div class="service__card-img">
-                            <img src="assets/images/service-three.webp" alt="">
-                        </div>
-                        <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-3</span>
-                            </div>
-                            <div class="service__card-heading">
-                                <h2>Finance Consultant</h2>
-                            </div>
-                            <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
-                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
-                                <div class="Read_deatils-btn">
-                                    <button class="border-btn"><span>Read Deatils</span></button>
+                            <div class="footer__single-column-single-event">
+                                <div class="event__img">
+                                    <img src="assets/images/consult-three.webp" alt="">
+                                </div>
+                                <div class="footer__single-column-event_info">
+                                    <h3>Cultures of Creativity</h3>
+                                    <span>30 August, UK</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="service__card flex align-items-center g-20">
-                        <div class="service__card-img">
-                            <img src="assets/images/service-four.webp" alt="">
-                        </div>
-                        <div class="service__card-content">
-                            <div class="service__card-content-tagbtn"><span class="highlight__text">Service-4</span>
-                            </div>
-                            <div class="service__card-heading">
-                                <h2>One-to-one Consulting</h2>
-                            </div>
-                            <div class="service__card-desc">
-                                <p>Where we specialize in transforming your visions into unforgettable experiences. With
-                                    a passion for perfection and an eye for detail our dedicated team of event.</p>
-                                <div class="Read_deatils-btn">
-                                    <button class="border-btn"><span>Read Deatils</span></button>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section>
-        <!-- ===================================== -->
-        <!-- SETVICES  PART END -->
-        <!-- ===================================== -->
-
-
-
-        <!-- ===================================== -->
-        <!-- OUR WORK  PART START -->
-        <!-- ===================================== -->
-        <section id="our-work" class="our-work-area">
-            <div class="container work__area">
-                <div class="our_wrorkshowcase">
-                    <img src="assets/images/work-showcase.svg" alt="">
-                </div>
-
-                <div class="large__title">
-
-                    <div class="work__title">
-                        <h4>Recent</h4>
-                        <h4>Works</h4>
+            <div class="footer__newsletter">
+                <div class="footer__newsletter-inner grid grid-2 align-items-center flex-wrap">
+                    <div class="newsletter flex g-20 align-items-center ">
+                        <div class="newsletter__bellicon">
+                            <img src="assets/images/bell-icon.webp" alt="">
+                        </div>
+                        <div class="newsletter__content">
+                            <h3>keep up to date - <br>
+                                get updates with latest topics</h3>
+                        </div>
                     </div>
-
-                    <div class="subheading">
-                        <p>Ready to transform your hard work into <br> a thriving, stress-free business?</p>
-                    </div>
-                </div>
-
-                <div class="work__arrow">
-
-                    <div class="swiper-button-next" style="left: -5rem;">
-                        <i class="ri-arrow-left-line icon-gradient"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-
-                        <i class="ri-arrow-right-line icon-gradient"></i>
-                    </div>
-                </div>
-
-            </div>
-            <div class="our__work">
-
-                <div class="swiper-wrapper our__work--wrapper">
-
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/about-img-one.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <a href="#">
-                                        <button class="gradient-btn gradient-btn--circle">
-                                            <img src="assets/images/up-arrow.svg" alt="">
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/about-img-two.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <a href="#">
-                                        <button class="gradient-btn gradient-btn--circle">
-                                            <img src="assets/images/up-arrow.svg" alt="">
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/service-four.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <a href="#">
-                                        <button class="gradient-btn gradient-btn--circle">
-                                            <img src="assets/images/up-arrow.svg" alt="">
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/service-three.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <a href="#">
-                                        <button class="gradient-btn gradient-btn--circle">
-                                            <img src="assets/images/up-arrow.svg" alt="">
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="swiper-slide our__work--wrapper--card">
-
-                        <div class="our__work--wrapper--card--img">
-                            <img src="assets/images/service-one.webp" alt="">
-                        </div>
-                        <div class="our__work--wrapper--card--content">
-                            <div class="our__work--wrapper--card--content-btn">
-                                <button class="gradient-btn"><span>2024, Business</span></button>
-                            </div>
-                            <div class="our__work--wrapper--card--content-heading flex align-items-center">
-                                <h3>Business Consulting Service</h3>
-                                <div class="content__cta-btn">
-                                    <a href="#">
-                                        <button class="gradient-btn gradient-btn--circle">
-                                            <img src="assets/images/up-arrow.svg" alt="">
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="newsletter__inputbox flex">
+                        <input type="email" name="email" id="email" autocomplete="off" class="flex-1"
+                            placeholder="Enter your email...">
+                        <button class="primary-button subscribe-btn">Subscribe</button>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ===================================== -->
-        <!-- OUR WORK  PART END -->
-        <!-- ===================================== -->
-
-        <!-- ===================================== -->
-        <!-- TESTiMONIAL  PART START -->
-        <!-- ===================================== -->
-        <section class="testimonial--slider" id="testimonial">
-            <div class="left_circle">
-                <div class="gradient_circle"></div>
-            </div>
-            <div class="container">
-                <div class="slider-inner">
-                    <div class="slider-row">
-                        <div class="testimonial-swiper slider-custom-image">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonial-wrap">
-                                        <div class="testimonial-wrap--inner">
-
-                                            <h4 class="testimonial-heading">“Simply dummy text of the printing and
-                                                Expert
-                                                Advisor. lorem Ipsum has been the standard dummy text ever since the
-                                                when an
-                                                unknown printer took a galley of type and scrambled.”</h4>
-                                            <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
-                                            <div class="testimonila_star">
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-half-line"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-wrap">
-                                        <div class="testimonial-wrap--inner">
-
-                                            <h4 class="testimonial-heading">“Simply dummy text of the printing and
-                                                Expert
-                                                Advisor. lorem Ipsum has been the standard dummy text ever since the
-                                                when an
-                                                unknown printer took a galley of type and scrambled.”</h4>
-                                            <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
-                                            <div class="testimonila_star">
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-half-line"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-
-                                    <div class="testimonial-wrap">
-
-                                        <div class="testimonial-wrap--inner">
-                                            <h4 class="testimonial-heading">“Simply dummy text of the printing and
-                                                Expert
-                                                Advisor. lorem Ipsum has been the standard dummy text ever since the
-                                                when an
-                                                unknown printer took a galley of type and scrambled.”</h4>
-                                            <span class="testimonial-user"><span>Bm Ashik</span> - UI/UX Designer</span>
-                                            <div class="testimonila_star">
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-half-line"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination slider-custom-image-pagination"></div>
-                            
-                            <div class="testomonail__arrow">
-                                <div class="swiper-button-next">
-                                    <i class="ri-arrow-right-line icon-gradient"></i>
-                                </div>
-                                <div class="swiper-button-prev">
-                                    <i class="ri-arrow-left-line icon-gradient"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gradient_circle"></div>
+            <div class="footer__bottom flex justify-space-between align-items-center w-100">
+                <div class="copyright_text">
+                    <span>&copy; 2024 <a href="https://themeforest.net/user/rainbow-themes/portfolio" target="_blank"
+                            class="highlight__text">Rainbow Themes</a>. All Rights Reserved.</span>
+                </div>
+                <div class="footer_links">
+                    <ul class="flex g-10 align-items-center flex-wrap">
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
                 </div>
             </div>
-        </section>
-        <!-- ===================================== -->
-        <!-- TESTOMONIAL  PART END -->
-        <!-- ===================================== -->
+        </div>
+        <div class="circle__icon circle__icon--bottom dancer">
+            <img src="assets/images/circle-3d.webp" alt="" width="100">
+        </div>
 
-
-
-        <!-- ===================================== -->
-        <!-- FOOTER PART START -->
-        <!-- ===================================== -->
-        <footer id="footer" class="footer_area">
-            <div class="circle__icon circle__icon--left dancer">
-                <img src="assets/images/circle-3d.webp" alt="">
-            </div>
-            <div class="container">
-                <div class="footer flex flex-wrap g-20">
-                    <div class="footer__single w-33">
-                        <div class="footer__single-logo">
-                            <a href="#">
-                                <img src="assets/images/logo.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="footer__single-desc ">
-                            <p class="color-white py-2">Introducing our team of talented and skilled professionals who
-                                are
-                                ready to increase your productivity and bring your business.</p>
-                        </div>
-                        <div class="footer__single-info">
-                            <h2>We Are Available !!</h2>
-                            <span>Mon-Sat: 10:00am - 08:00pm</span>
-                        </div>
-                        <div class="footer__single-social my-2">
-                            <div class="social-icons flex flex-wrap align-items-center g-15">
-                                <a href="#"><i class="ri-facebook-fill"></i></a>
-                                <a href="#"><i class="ri-twitter-fill"></i></a>
-                                <a href="#"><i class="ri-instagram-line"></i></a>
-                                <a href="#"><i class="ri-linkedin-fill"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer__single  flex flex-wrap flex-1">
-                        <div class="footer__single-column w-33">
-                            <div class="footer__single-column-title">
-                                <h2>Quick Link</h2>
-                                <ul>
-                                    <li><a href="#">About Company</a></li>
-                                    <li><a href="#">Strategy</a></li>
-                                    <li><a href="#">Investor Presentation</a></li>
-                                    <li><a href="#">Investor Career</a></li>
-                                    <li><a href="#">Meet Our Team </a></li>
-                                    <li><a href="#">Get in Touch </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer__single-column w-33">
-                            <div class="footer__single-column-title">
-                                <h2>Quick Link</h2>
-                                <ul>
-                                    <li><a href="#">Business Consulting</a></li>
-                                    <li><a href="#">Finance Strategy</a></li>
-                                    <li><a href="#">Investor Presentation</a></li>
-                                    <li><a href="#">Investor Career</a></li>
-                                    <li><a href="#">Marketing Analysis </a></li>
-                                    <li><a href="#">Tax Preparation</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="footer__single-column w-33">
-                            <div class="footer__single-column-title">
-                                <h2>Upcoming Event</h2>
-
-                                <div class="footer__single-column-single-event">
-                                    <div class="event__img">
-                                        <img src="assets/images/consult-one.webp" alt="">
-                                    </div>
-                                    <div class="footer__single-column-event_info">
-                                        <h3>Business Consulting</h3>
-                                        <span>26 March, USA</span>
-                                    </div>
-                                </div>
-
-                                <div class="footer__single-column-single-event">
-                                    <div class="event__img">
-                                        <img src="assets/images/consult-two.webp" alt="">
-                                    </div>
-                                    <div class="footer__single-column-event_info">
-                                        <h3>Email Marketing</h3>
-                                        <span>29 September, CA</span>
-                                    </div>
-                                </div>
-
-                                <div class="footer__single-column-single-event">
-                                    <div class="event__img">
-                                        <img src="assets/images/consult-three.webp" alt="">
-                                    </div>
-                                    <div class="footer__single-column-event_info">
-                                        <h3>Cultures of Creativity</h3>
-                                        <span>30 August, UK</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="footer__newsletter">
-                    <div class="footer__newsletter-inner grid grid-2 align-items-center flex-wrap">
-                        <div class="newsletter flex g-20 align-items-center ">
-                            <div class="newsletter__bellicon">
-                                <img src="assets/images/bell-icon.webp" alt="">
-                            </div>
-                            <div class="newsletter__content">
-                                <h3>keep up to date - <br>
-                                    get updates with latest topics</h3>
-                            </div>
-                        </div>
-                        <div class="newsletter__inputbox flex">
-                            <input type="email" name="email" id="email" autocomplete="off" class="flex-1"
-                                placeholder="Enter your email...">
-                            <button class="primary-button subscribe-btn">Subscribe</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom flex justify-space-between align-items-center w-100">
-                    <div class="copyright_text">
-                        <span>&copy; 2024 <a href="https://themeforest.net/user/rainbow-themes/portfolio"
-                                target="_blank" class="highlight__text">Rainbow Themes</a>. All Rights Reserved.</span>
-                    </div>
-                    <div class="footer_links">
-                        <ul class="flex g-10 align-items-center flex-wrap">
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="circle__icon circle__icon--bottom dancer">
-                <img src="assets/images/circle-3d.webp" alt="" width="100">
-            </div>
-
-        </footer>
-        <!-- ===================================== -->
-        <!-- FOOTER PART END -->
-        <!-- ===================================== -->
+    </footer>
+    <!-- ===================================== -->
+    <!-- FOOTER PART END -->
+    <!-- ===================================== -->
 
 
 
@@ -889,17 +919,11 @@
     <!-- ==========SWIPER SLIDER JS ========== -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- ==========SMOOTH SCROLL JS ========== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.6.3/smooth-scrollbar.js"></script>
-
     <!-- ==========GSAP ANIMATION JS ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
     <!-- ==========GSAP SCROLLTRIGGER PLUGIN ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <!-- ==========GSAP SCROLLTRIGGER PLUGIN ========== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
     <!-- ==========AOS ANIMATION JS ========== -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -912,44 +936,17 @@
 
     <script>
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    AOS.init();
-});
-
-
-$(document).ready(function() {
-  // Get elements
-  const $menuIcon = $('.menu__icon');
-  const $sidebar = $('.mobile_sidebar');
-  const $overlay = $('.overlay');
-  const $closeButton = $('.menu__close-btn');
-
-  // Function to open sidebar
-  function openSidebar() {
-    $sidebar.addClass('active');
-    $overlay.show();
-    $('body').css('overflow', 'hidden');
-  }
-
-  // Function to close sidebar
-  function closeSidebar() {
-    $sidebar.removeClass('active');
-    $overlay.hide();
-    $('body').css('overflow', 'auto');
-  }
-
-  // Event listeners
-  $menuIcon.on('click', openSidebar);
-  $closeButton.on('click', closeSidebar);
-  $overlay.on('click', closeSidebar);
-});
-
- 
+    
+        //  AOS ANIMATION
+        document.addEventListener("DOMContentLoaded", function () {
+      AOS.init({
+        duration: 1200,        // Animation duration
+        easing: 'ease',       // Easing effect
+        once: true,           // Animation only triggers once
+        offset: '100%',       // Start animation when the element reaches 100% of viewport height (100vh)
+      });
+    });
+        // ALL GSAP ANIMATION
 
         var tl = gsap.timeline()
 
@@ -960,9 +957,9 @@ $(document).ready(function() {
             ease: "power2.out",
         }, "0")
 
-        tl.from(".hero__title , .about__info-text h2", {
-            y: 30,
-            duration: 1,
+        tl.from(".hero__title", {
+            y: -100,
+            duration: 1.5,
             ease: "power2.out",
             opacity: 0,
             delay: 0.2,
@@ -1011,7 +1008,6 @@ $(document).ready(function() {
         const waveHeading = document.querySelector(".hero__description");
         waveHeading.innerHTML = waveHeading.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-        // Animate each letter
         gsap.fromTo(".letter", {
             y: 50,
             opacity: 0
@@ -1022,6 +1018,7 @@ $(document).ready(function() {
             ease: "back.out(1)",
             duration: 0.5
         });
+
     </script>
 
 </body>

@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 85vh;
+    overflow: hidden;
 
     @include respond('768') {
         display: flex;
@@ -14,7 +15,9 @@
         position: absolute;
         top: 30%;
         left: -10%;
+        z-index: -1;
         filter: blur(0.3rem);
+        opacity: 0.8;
         @include respond('768')
         {
           left: 5rem;
@@ -45,20 +48,6 @@
                     left: 0;
                 }
             }
-
-            .heading_shape {
-                position: absolute;
-                top: -4rem;
-
-                @include respond('520')
-                {
-                    display: none;
-                }
-
-                img {
-                    width: 8rem;
-                }
-            }
         }
 
         &__img {
@@ -67,15 +56,16 @@
             right: 0;
             width: 60%;
 
-            @include respond('1440') {
-                width: 70%;
-            }
             @include respond('1280')
             {
                 width: 65%;
             }
+            @include respond('1180')
+            {
+                width: 60%;
+            }
 
-            @include respond('768') {
+            @include respond('991') {
                 display: none;
             }
 
@@ -91,8 +81,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-             
+                @include respond('1440')
+                {
+                    top: -10rem;
+                }
 
                 @include respond('1280')
                 {
@@ -158,6 +150,10 @@
         }
 
         &__contact {
+            @include respond('768')
+            {
+                display: none;
+            }
             .contact_icon {
                 width: 5rem;
                 height: 5rem;
@@ -291,10 +287,25 @@
 .hero__shape--right {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -10rem;
+    img 
+    {
+        @include respond('768')
+        {
+            width: 200px;
+        }
+    }
+   
 }
 
 .hero__shape--left {
     position: absolute;
     bottom: 0;
+    img 
+    {
+        @include respond('768')
+        {
+            width: 200px;
+        }
+    }
 }

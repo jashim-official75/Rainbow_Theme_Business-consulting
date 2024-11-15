@@ -26,6 +26,29 @@ h1 {
     margin: 5.87rem  0 2.37rem;
     font-weight: 600;
     color: $text-dark;
+    display: inline-block;
+
+    &::after
+    {
+      position: absolute;
+      top: 0;
+      right: -7rem;
+      content: '';
+      width: 7rem;
+      height: 7rem;
+      background-size: 7rem;
+      background-image: url('/assets/images/heading-shape.webp');
+      background-repeat: no-repeat;
+
+      @include respond('768')
+      {
+        width: 3.5rem;
+        height: 3.5rem;
+        background-size: 3.5rem;
+        right: -4rem;
+      }
+
+    }
 
     @include respond('768')
     {

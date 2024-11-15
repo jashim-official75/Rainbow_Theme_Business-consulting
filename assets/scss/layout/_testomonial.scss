@@ -198,8 +198,9 @@
   padding: 5rem 0;
   @include respond('1280')
   {
-    top: -2rem;
+    top: 5rem;
   }
+
 }
 
 .quote_icon {
@@ -260,5 +261,10 @@
 
   &.swiper-button-prev {
     left: 20%;
+  }
+
+  @include respond('520')
+  {
+    display: none;
   }
 }

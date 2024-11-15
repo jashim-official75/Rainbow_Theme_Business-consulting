@@ -1,31 +1,68 @@
 
 
+// ==========================
+// MOBILE SIDEBAR
+// ==========================
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const menuIcon = document.querySelector('.menu__icon');
+  const sidebar = document.querySelector('.mobile_sidebar');
+  const overlay = document.querySelector('.overlay');
+  const closeButton = document.querySelector('.menu__close-btn');
+  const menuItems = document.querySelectorAll('.mobile_sidebar .mobile__menu'); 
+
+
+  function openSidebar() {
+    sidebar.classList.add('active');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  menuIcon.addEventListener('click', openSidebar);
+  closeButton.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+
+  menuItems.forEach(item => {
+    item.addEventListener('click', closeSidebar);
+  });
+
+});
+
+
+
+
+// ==========================
+// SERVICE CARD ONSCROLL EFFECT
+// ==========================
+
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all service cards
+
   const serviceCards = document.querySelectorAll('.service__card');
 
-  // Observer options
   const observerOptions = {
-    threshold: 0.3, // Trigger animation when 30% of the card is visible
+    threshold: 0.3, 
   };
 
-  // Callback function to handle the card visibility
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Add 'active' class when the card is in view
         entry.target.classList.add('active');
       } else {
-        // Remove 'active' class when the card is out of view
         entry.target.classList.remove('active');
       }
     });
   };
 
-  // Create an IntersectionObserver instance
   const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-  // Observe each service card
   serviceCards.forEach((card) => {
     observer.observe(card);
   });
@@ -57,8 +94,6 @@ window.addEventListener("mousemove", function (e) {
   );
 });
 
-
- 
 
 // ==========================
 // SWIPER CAROUSEL FOR OUR WORK SECTION
@@ -133,40 +168,10 @@ var mySwiper = new Swiper('.our__work', {
   },
 });
 
-
-// ==========================
-// GSAP SCROLL ANIMATION FOR SERVICE CARDS
-// ==========================
-// document.addEventListener("DOMContentLoaded", function () {
-//   gsap.registerPlugin(ScrollTrigger);
-
-  // Target each service card
-  // const cards = document.querySelectorAll(".service__card");
-
-  // Loop through each card and apply the animation
-//   cards.forEach((card, index) => {
-//     gsap.fromTo(
-//       card,
-//       { y: 100, opacity: 0 },
-//       {
-//         y: 0,
-//         opacity: 1,
-//         duration: 1,
-//         ease: "power3.out",
-//         scrollTrigger: {
-//           trigger: card,
-//           start: "top 80%",
-//           end: "bottom 50%",
-//           scrub: true,
-//         },
-//       }
-//     );
-//   });
-// });
-
 // ==========================
 // LANGUAGE TOGGLE DROPDOWN
 // ==========================
+
 function toggleDropdown() {
   const dropdownContent = document.querySelector(".language-dropdown__content");
   dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
@@ -187,6 +192,7 @@ function changeLanguage(language) {
 // ==========================
 // NUMBER COUNT ANIMATION
 // ==========================
+
 $(document).ready(function() {
   function countUp() {
     $('.number').each(function() {
@@ -207,7 +213,7 @@ $(document).ready(function() {
       }
     });
   }
-  
+
   $(window).on('scroll', function() {
     $('.number').each(function() {
       var $this = $(this);
@@ -223,6 +229,7 @@ $(document).ready(function() {
 // ==========================
 // TESTIMONIAL SLIDER
 // ==========================
+
 $(document).ready(function() {
   var swiper = new Swiper('.testimonial-swiper', {
     loop: true,
@@ -231,8 +238,8 @@ $(document).ready(function() {
       disableOnInteraction: false,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.testomonail__arrow .swiper-button-next',
+      prevEl: '.testomonail__arrow .swiper-button-prev',
     },
     pagination: {
       el: '.swiper-pagination',
@@ -248,10 +255,10 @@ $(document).ready(function() {
 // ==========================
 // GSAP MARQUEE ANIMATION
 // ==========================
+
 gsap.registerPlugin(ScrollTrigger);
 
 let marqueeSpeed = 40; 
-
 let marqueeTween = gsap.to(".marquee__container-content ", {
   x: `-=${marqueeSpeed}%`,
   duration: 10,
@@ -272,28 +279,42 @@ ScrollTrigger.create({
  // ==========================
 // VIDEO POPUP
 // ==========================
-document.getElementById("playButton").addEventListener("click", function() {
 
-  document.getElementById("videoPopup").style.display = "flex";
-  document.body.style.overflow = "hidden";
-  const videoId = "DR9lxZ8kPYQ";
-  const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  document.getElementById("videoIframe").src = videoUrl;
-});
+$(document).ready(function() {
+  // Function to handle popup opening
+  function openPopup() {
+    $("#videoPopup").css("display", "flex");
+    $("body").css("overflow", "hidden");
+    const videoId = "DR9lxZ8kPYQ"; // Set the video ID (you can dynamically set it if needed)
+    const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+    $("#videoIframe").attr("src", videoUrl);
+  }
 
+  // Mobile play button click event
+  $(".playButtonMobile").on("click", function() {
+    openPopup();
+  });
 
-document.getElementById("closePopup").addEventListener("click", closePopup);
+  // Desktop play button click event
+  $(".playButtonDesktop").on("click", function() {
+    openPopup();
+  });
 
+  // Close button click event
+  $("#closePopup").on("click", closePopup);
 
-document.getElementById("videoPopup").addEventListener("click", function(event) {
-  if (event.target === this) {  
-    closePopup();
+  // Close popup when clicking outside the iframe
+  $("#videoPopup").on("click", function(event) {
+    if (event.target.id === "videoPopup") {
+      closePopup();
+    }
+  });
+
+  // Function to close the popup
+  function closePopup() {
+    $("#videoPopup").css("display", "none");
+    $("body").css("overflow", "auto");
+    $("#videoIframe").attr("src", ""); // Reset the iframe src to stop video
   }
 });
 
-
-function closePopup() {
-  document.getElementById("videoPopup").style.display = "none";
-  document.body.style.overflow = "auto";
-  document.getElementById("videoIframe").src = "";  
-}

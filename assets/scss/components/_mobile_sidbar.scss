@@ -14,7 +14,7 @@
 
 .mobile_sidebar {
   background-color: $text-dark;
-  padding: 20px;
+  padding: 3rem 0;
   width: 280px;
   position: fixed;
   top: 0;
@@ -23,17 +23,50 @@
   overflow-y: auto;
   z-index: 10000000;
   @include transition(all 0.3s ease-in-out);
-
+  &__logo
+  {
+    img 
+    {
+      width: 80%;
+      margin: 2rem auto 0; 
+      display: block;
+    }
+  }
   &.active {
     left: 0;
   }
 
   .menu__close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     display: flex;
     justify-content: flex-end;
-    font-size: 24px;
+    font-size: 3rem;
     color: $light-color;
     cursor: pointer;
+  }
+  h3 
+  {
+    text-align: center;
+  }
+
+  p 
+  {
+    padding-left: 2rem;
+    margin: 1rem 0 !important;
+  }
+
+  .mobile__btn
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    .primary-button 
+    {
+      width: 80%;
+    }
   }
 
   .mobile__menu {
@@ -42,13 +75,13 @@
       padding: 2rem 0;
       margin: 0;
       li {
-        margin: 10px 0;
+
 
         a {
           color: $light-color;
           text-decoration: none;
           font-weight: 500;
-          padding: 1rem 2rem;
+          padding:  2rem;
           display: block;
           text-align: left;
           border-bottom: 1px solid $light-color-1;
@@ -92,5 +125,33 @@
     color: $text-dark;
     text-align: center;
     cursor: pointer;
+  }
+
+  .social-icons
+  {
+    position: relative;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 0;
+    a 
+    {
+      width: 5rem;
+      height: 5rem;
+      border: 2px solid $theme-color;
+      @extend .flex-center;
+      @include border-radius(50%);
+      background: $light-color-1;
+      &:hover 
+      {
+        background: $theme-color;
+      }
+    }
+    i 
+    {
+      font-size: 2rem;
+      color: $light-color;
+    }
   }
 }

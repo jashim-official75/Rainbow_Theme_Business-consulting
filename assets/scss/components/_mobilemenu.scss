@@ -5,6 +5,13 @@
     display: none ;
     background: $text-dark;
     padding:1.2rem 2rem;
+    .logo 
+    {
+        img 
+        {
+            width: 5rem;
+        }
+    }
   
     @include respond('768') {
       display: flex ;
@@ -19,6 +26,7 @@
         height: 5rem;
         background: $dark-color;
         @extend .flex-center;
+        margin-left: 1rem;
         cursor: pointer;
         &:hover 
         {
@@ -31,5 +39,64 @@
             color: $light-color;
         }
     }
+    .cart__icon
+    {
+        position: relative;
+        width: 5rem;
+        height: 5rem;
+        background: $dark-color;
+        margin-left: auto;
+        @extend .flex-center;
+        @include border-radius(1rem);
+        font-size: 2rem;
+        &:hover 
+        {
+            background: $theme-color;
+        }
+        i 
+        {
+            color: $light-color;
+        }
+      
+            .cart-count 
+            {
+                position: absolute;
+                top: -1.5rem;
+                right: -1.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                transform: scale(0.8);
+                background: $primary-color;
+                @extend .flex-center;
+                color: $light-color;
+                font-size: 1rem;
+                font-weight: 700;
+                @include border-radius(50%);
+            }
+        
+    }
   }
   
+
+  .mobile__hero-playbtn 
+  {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    @include respond('768')
+    {
+        display: block;
+    }
+    .hero__img-circle
+    {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        img 
+        {
+            width: 100% !important;
+        }
+    }
+    
+  }
+

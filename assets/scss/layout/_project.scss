@@ -6,6 +6,7 @@
 .our-work-area {
     position: relative;
     padding-bottom: 0;
+    overflow: hidden;
     .swiper-slide-active {
         .our__work--wrapper--card--content {
             bottom: 0;

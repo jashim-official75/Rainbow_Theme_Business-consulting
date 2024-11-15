@@ -1,6 +1,7 @@
 .about_area {
     position: relative;
     padding: 10rem 0 0;
+    overflow: hidden;
     @include respond('480')
     {
         padding-top: 3rem;

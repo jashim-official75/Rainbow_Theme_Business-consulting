@@ -4,26 +4,34 @@
     position: relative;
     background: $foooter-bg;
     padding: 10rem 0 0;
-
+    @include respond('1280') 
+    {
+        padding: 6rem 0 0;
+    }
     @include respond('768') {
+        padding: 5rem 0 0;
+    }
+
+    @include respond('520') {
         padding: 1rem;
     }
 
     .footer {
-        @include respond('768')
-        {
+        @include respond('768') {
             flex-direction: column;
         }
+
         &__single-logo {
             width: 100%;
         }
 
         &__single-desc {
             padding-right: 2rem;
-            @include respond('768')
-            {
+
+            @include respond('768') {
                 padding-right: 1rem;
             }
+
             p {
                 font-size: 1.6rem;
             }
@@ -88,18 +96,27 @@
             background: $dark-footer-gradient;
             padding: 5rem;
             @include box-shadow($footer-shadow);
-            @include respond('991') 
+            @include respond('1280') 
             {
-                padding: 2rem;
+                padding: 3rem;
             }
-            @include respond('520')
+            @include respond('1180') 
             {
                 padding: 1rem;
+                width: 100%;
             }
-         
+
+            @include respond('991') {
+                padding: 2rem;
+            }
+
+            @include respond('520') {
+                padding: 1rem;
+            }
+
             @include border-radius(1rem);
-            &::after
-            {
+
+            &::after {
                 content: "";
                 position: absolute;
                 top: 0;
@@ -110,9 +127,13 @@
                 filter: blur(0.2rem);
                 opacity: 0.5;
             }
+
             &-column {
 
-               
+                @include respond('1180')
+                {
+                    width: 100%;
+                }
                 @include respond('520') {
                     padding: 1rem;
                 }
@@ -127,8 +148,8 @@
                         font-weight: 600;
                         color: $light-color;
                         margin-bottom: 5rem;
-                        @include respond('768')
-                        {
+
+                        @include respond('768') {
                             margin: 2rem 0;
                         }
                     }
@@ -136,8 +157,13 @@
                     ul {
                         li {
                             padding-bottom: 4rem;
-                            @include respond('768')
+
+                            @include respond('1440') 
                             {
+                                padding-bottom: 3rem;
+                            }
+
+                            @include respond('768') {
                                 padding-bottom: 1.5rem;
                             }
 
@@ -179,10 +205,11 @@
                     align-items: center;
                     gap: 2rem;
                     margin-bottom: 4rem;
-                    @include respond('768')
-                    {
+
+                    @include respond('768') {
                         margin-bottom: 2rem;
                     }
+
                     .event__img {
                         width: 5rem;
                         height: 5rem;
@@ -201,12 +228,10 @@
                             object-fit: cover;
                         }
                     }
-                    &:hover 
-                    {
-                        h3
-                        {
-                            &::after 
-                            {
+
+                    &:hover {
+                        h3 {
+                            &::after {
                                 width: 100%;
                             }
                         }
@@ -217,8 +242,8 @@
                         margin-bottom: 0.5rem;
                         font-weight: 500;
                         padding-bottom: 0.2rem;
-                        &::after
-                        {
+
+                        &::after {
                             content: "";
                             position: absolute;
                             width: 0%;
@@ -244,19 +269,25 @@
             position: relative;
             background-image: url("/assets/images/newsletter-bg.webp");
             padding: 4rem;
-            @include respond('768')
+
+            @include respond('1280') 
             {
+                padding: 3rem;
+            }
+
+            @include respond('768') {
                 padding: 2rem;
             }
+
             background-size: cover;
             @include border-radius(1rem);
             overflow: hidden;
 
             .newsletter {
-                @include respond('768')
-                {
+                @include respond('768') {
                     flex-direction: column;
                 }
+
                 &__bellicon {
                     position: relative;
                     width: 10rem;
@@ -288,8 +319,12 @@
                         font-size: clamp(2rem, 5vw, 3.2rem);
                         line-height: 1;
                         margin-bottom: 0;
-                        @include respond('768') 
+                        @include respond('1280')
                         {
+                            font-size: 2.5rem;
+                        } 
+
+                        @include respond('768') {
                             text-align: center;
                         }
                     }
@@ -326,14 +361,13 @@
     .footer__bottom {
         padding: 5rem 0;
 
-        @include respond('768')
-        {
+        @include respond('768') {
             flex-direction: column;
             gap: 3rem;
             padding: 3rem 0;
         }
 
-      
+
 
         .copyright_text {
             span {
@@ -345,6 +379,9 @@
     }
 
     .footer_links ul {
+        display: flex;
+        justify-content: center;
+
         li {
             position: relative;
 
@@ -367,6 +404,7 @@
             &:hover::after {
                 background: $theme-color;
             }
+
             &:hover a {
                 color: $theme-color;
             }
