@@ -38,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
 // ==========================
 // SERVICE CARD ONSCROLL EFFECT
 // ==========================
@@ -281,40 +279,37 @@ ScrollTrigger.create({
 // ==========================
 
 $(document).ready(function() {
-  // Function to handle popup opening
+
+
   function openPopup() {
     $("#videoPopup").css("display", "flex");
     $("body").css("overflow", "hidden");
-    const videoId = "DR9lxZ8kPYQ"; // Set the video ID (you can dynamically set it if needed)
+    const videoId = "DR9lxZ8kPYQ"; 
     const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     $("#videoIframe").attr("src", videoUrl);
   }
 
-  // Mobile play button click event
   $(".playButtonMobile").on("click", function() {
     openPopup();
   });
 
-  // Desktop play button click event
   $(".playButtonDesktop").on("click", function() {
     openPopup();
   });
 
-  // Close button click event
   $("#closePopup").on("click", closePopup);
 
-  // Close popup when clicking outside the iframe
+ 
   $("#videoPopup").on("click", function(event) {
     if (event.target.id === "videoPopup") {
       closePopup();
     }
   });
 
-  // Function to close the popup
   function closePopup() {
     $("#videoPopup").css("display", "none");
     $("body").css("overflow", "auto");
-    $("#videoIframe").attr("src", ""); // Reset the iframe src to stop video
+    $("#videoIframe").attr("src", ""); 
   }
 });
 
