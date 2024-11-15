@@ -9,6 +9,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  overflow: hidden;
 
 }
 
@@ -23,6 +24,7 @@
   overflow-y: auto;
   z-index: 10000000;
   @include transition(all 0.3s ease-in-out);
+  overflow-x: hidden;
   &__logo
   {
     img 

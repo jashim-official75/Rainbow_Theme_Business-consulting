@@ -1,6 +1,7 @@
 .testimonial--slider {
   background: $offwhite-color;
   padding: 15rem 10px;
+  overflow: hidden;
   @include respond('480')
   {
     padding: 5rem 0 8rem;
