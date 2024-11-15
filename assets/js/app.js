@@ -63,8 +63,6 @@ $(document).ready(function() {
   }
 });
 
-
-
   
 // ======================================
 //AOS NEXT ANIMATION ACTIVATION CODE
@@ -72,7 +70,10 @@ $(document).ready(function() {
 
 AOS.init();
 
-        // ALL GSAP ANIMATION
+
+// ======================================
+//ALL GSAP ANIMATION
+// ======================================
 
         var tl = gsap.timeline()
 
@@ -90,7 +91,6 @@ AOS.init();
             opacity: 0,
             delay: 0.2,
         }, 0);
-
 
         tl.from(".nav__menu li , .primary-btn", {
             y: -30,
@@ -167,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function closeSidebar() {
     sidebar.classList.remove('active');
     overlay.style.display = 'none';
-    document.body.style.overflow = 'auto';
   }
 
   if (menuIconDesktop) menuIconDesktop.addEventListener('click', openSidebar);

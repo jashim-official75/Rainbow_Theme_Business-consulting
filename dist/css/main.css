@@ -106,7 +106,7 @@
   left: -28rem;
   height: 100vh;
   overflow-y: auto;
-  overflow: hidden;
+  overflow: hidden !important;
   z-index: 10000000;
   -webkit-transition: all 0.5s cubic-bezier(0.3, 0.5, 0.3, 1);
   transition: all 0.5s cubic-bezier(0.3, 0.5, 0.3, 1);
