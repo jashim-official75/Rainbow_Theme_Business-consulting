@@ -12,7 +12,6 @@ body {
     padding: 0;
     font-family: $font-inter;
     background: $light-color;
-    height: 100%;
     font-size: 1.6rem;
     cursor: none;
     min-height: 100vh;  
@@ -29,7 +28,7 @@ html {
 
 html, body {
     font-size: 62.75%;
-    height: 100% !important;
+    min-height: 100% ;
     overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
@@ -211,9 +210,6 @@ template {
     display: none;
 }
 
-[hidden] {
-    display: none;
-}
 
 svg {
     display: inline-block;

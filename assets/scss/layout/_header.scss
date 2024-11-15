@@ -69,9 +69,17 @@
             color: $text-color;
             font-size: 1.6rem;
             text-decoration: none;
+            &:hover 
+            {
+                i 
+                {
+                    color: $theme-color;
+                }
+            }
             i 
             {
                 font-size: 2.5rem;
+                color: $text-color;
             }
         }
         .cart-icon

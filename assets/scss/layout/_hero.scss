@@ -10,7 +10,10 @@
         text-align: center;
         align-items: center;
     }
-
+    @include respond('520') { 
+        height: 600px;
+        min-height: 500px;
+    }
     .cube_box {
         position: absolute;
         top: 30%;

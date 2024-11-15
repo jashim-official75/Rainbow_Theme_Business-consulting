@@ -697,7 +697,6 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   background: #fff;
-  height: 100%;
   font-size: 1.6rem;
   cursor: none;
   min-height: 100vh;
@@ -714,7 +713,7 @@ html {
 
 html, body {
   font-size: 62.75%;
-  height: 100% !important;
+  min-height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
@@ -895,10 +894,6 @@ summary {
 }
 
 template {
-  display: none;
-}
-
-[hidden] {
   display: none;
 }
 
@@ -1306,11 +1301,6 @@ section {
   top: -5rem;
 }
 
-#scroll-container {
-  position: relative;
-  overflow: hidden;
-}
-
 .cursor-dot {
   width: 1rem;
   height: 1rem;
@@ -1569,8 +1559,12 @@ section {
   font-size: 1.6rem;
   text-decoration: none;
 }
+.nav__icons a:hover i {
+  color: #5163FF;
+}
 .nav__icons a i {
   font-size: 2.5rem;
+  color: #838A95;
 }
 .nav__icons .cart-icon {
   position: relative;
@@ -1621,6 +1615,12 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media (max-width: 520px) {
+  .hero_area {
+    height: 600px;
+    min-height: 500px;
   }
 }
 .hero_area .cube_box {
@@ -2099,7 +2099,7 @@ section {
   font-weight: 400;
   color: #838A95;
   margin: 3rem 0;
-  left: 5rem;
+  left: 3rem;
 }
 @media (max-width: 768px) {
   .about_area .about__info-text ul li {
@@ -2964,6 +2964,11 @@ section {
             transform: translateX(-50%);
   }
 }
+@media (max-width: 768px) {
+  .testimonial--slider .testomonail__arrow {
+    display: none;
+  }
+}
 @media (max-width: 1280px) {
   .testimonial--slider .testomonail__arrow .swiper-button-next {
     left: 5rem;
@@ -3142,6 +3147,11 @@ section {
     top: 5rem;
   }
 }
+@media (max-width: 480px) {
+  .swiper-pagination {
+    top: -2rem;
+  }
+}
 
 .quote_icon {
   position: relative;
@@ -3158,9 +3168,6 @@ section {
   .slider-custom-image-pagination .swiper-pagination-bullet {
     width: 70px;
     height: 70px;
-  }
-  .creative-testimonial--slider .slider-row .swiper-pagination {
-    margin-top: 1.5rem;
   }
 }
 .swiper-button-next,
@@ -3202,10 +3209,4 @@ section {
 .swiper-button-next.swiper-button-prev,
 .swiper-button-prev.swiper-button-prev {
   left: 20%;
-}
-@media (max-width: 520px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none;
-  }
 }/*# sourceMappingURL=main.css.map */

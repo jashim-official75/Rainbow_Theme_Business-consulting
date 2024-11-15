@@ -17,10 +17,12 @@
         transform: translateX(-50%);
     
     }
-    @include respond('1180') 
-    {
 
+    @include respond('768')
+    {
+      display: none;
     }
+
     .swiper-button-next 
     {
       @include respond('1280')
@@ -200,6 +202,10 @@
   {
     top: 5rem;
   }
+  @include respond('480')
+  {
+    top: -2rem;
+  }
 
 }
 
@@ -226,9 +232,7 @@
     height: 70px;
   }
 
-  .creative-testimonial--slider .slider-row .swiper-pagination {
-    margin-top: 1.5rem;
-  }
+ 
 }
 
 .swiper-button-next,
@@ -263,8 +267,5 @@
     left: 20%;
   }
 
-  @include respond('520')
-  {
-    display: none;
-  }
+  
 }
